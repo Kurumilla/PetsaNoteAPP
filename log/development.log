@@ -1,0 +1,2227 @@
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-06 02:50:46 -0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210519174335_create_notes.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.1) lib/puma/configuration.rb:249:in `call'
+puma (5.3.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.3.1) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.3.1) lib/puma/server.rb:437:in `process_client'
+puma (5.3.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-12-06 02:51:03 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210519174335_create_notes.rb
+
+
+):
+  
+activerecord (6.1.3.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.1) lib/puma/configuration.rb:249:in `call'
+puma (5.3.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.3.1) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.3.1) lib/puma/server.rb:437:in `process_client'
+puma (5.3.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2024-12-06 02:51:16 -0800
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNotes (20210519174335)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "notes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210519174335"]]
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-12-06 10:51:16.144268"], ["updated_at", "2024-12-06 10:51:16.144268"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-12-06 02:51:16 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 02:51:16 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2164)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+ERROR: [Errno 21] Is a directory: 'bin'
+CRITICAL:root:Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/cliapp/app.py", line 182, in _run
+    self.settings.load_configs()
+  File "/usr/lib/python3/dist-packages/cliapp/settings.py", line 829, in load_configs
+    self._read_ini(pathname, f)
+  File "/usr/lib/python3/dist-packages/cliapp/settings.py", line 838, in _read_ini
+    cp.read_file(f)
+  File "/usr/lib/python3.12/configparser.py", line 705, in read_file
+    self._read(f, source)
+  File "/usr/lib/python3.12/configparser.py", line 1064, in _read
+    raise MissingSectionHeaderError(fpname, lineno, line)
+configparser.MissingSectionHeaderError: File contains no section headers.
+file: '/home/kurumilla/notes-app/config/webpack/development.js', line: 1
+"process.env.NODE_ENV = process.env.NODE_ENV || 'development'\n"
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/cliapp/app.py", line 182, in _run
+    self.settings.load_configs()
+  File "/usr/lib/python3/dist-packages/cliapp/settings.py", line 829, in load_configs
+    self._read_ini(pathname, f)
+  File "/usr/lib/python3/dist-packages/cliapp/settings.py", line 838, in _read_ini
+    cp.read_file(f)
+  File "/usr/lib/python3.12/configparser.py", line 705, in read_file
+    self._read(f, source)
+  File "/usr/lib/python3.12/configparser.py", line 1064, in _read
+    raise MissingSectionHeaderError(fpname, lineno, line)
+configparser.MissingSectionHeaderError: File contains no section headers.
+file: '/home/kurumilla/notes-app/config/webpack/development.js', line: 1
+"process.env.NODE_ENV = process.env.NODE_ENV || 'development'\n"
+
+  Rendered layout layouts/application.html.erb (Duration: 2401.4ms | Allocations: 68870)
+Completed 500 Internal Server Error in 2409ms (ActiveRecord: 0.3ms | Allocations: 73184)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/kurumilla/notes-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-06 02:59:35 -0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 02:59:35 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2322)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+ERROR: [Errno 21] Is a directory: 'bin'
+CRITICAL:root:Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/cliapp/app.py", line 182, in _run
+    self.settings.load_configs()
+  File "/usr/lib/python3/dist-packages/cliapp/settings.py", line 829, in load_configs
+    self._read_ini(pathname, f)
+  File "/usr/lib/python3/dist-packages/cliapp/settings.py", line 838, in _read_ini
+    cp.read_file(f)
+  File "/usr/lib/python3.12/configparser.py", line 705, in read_file
+    self._read(f, source)
+  File "/usr/lib/python3.12/configparser.py", line 1064, in _read
+    raise MissingSectionHeaderError(fpname, lineno, line)
+configparser.MissingSectionHeaderError: File contains no section headers.
+file: '/home/kurumilla/notes-app/config/webpack/development.js', line: 1
+"process.env.NODE_ENV = process.env.NODE_ENV || 'development'\n"
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/cliapp/app.py", line 182, in _run
+    self.settings.load_configs()
+  File "/usr/lib/python3/dist-packages/cliapp/settings.py", line 829, in load_configs
+    self._read_ini(pathname, f)
+  File "/usr/lib/python3/dist-packages/cliapp/settings.py", line 838, in _read_ini
+    cp.read_file(f)
+  File "/usr/lib/python3.12/configparser.py", line 705, in read_file
+    self._read(f, source)
+  File "/usr/lib/python3.12/configparser.py", line 1064, in _read
+    raise MissingSectionHeaderError(fpname, lineno, line)
+configparser.MissingSectionHeaderError: File contains no section headers.
+file: '/home/kurumilla/notes-app/config/webpack/development.js', line: 1
+"process.env.NODE_ENV = process.env.NODE_ENV || 'development'\n"
+
+  Rendered layout layouts/application.html.erb (Duration: 640.7ms | Allocations: 14750)
+Completed 500 Internal Server Error in 652ms (ActiveRecord: 0.7ms | Allocations: 19633)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/kurumilla/notes-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2024-12-06 02:59:51 -0800
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 02:59:51 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 804)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+ERROR: [Errno 21] Is a directory: 'bin'
+CRITICAL:root:Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/cliapp/app.py", line 182, in _run
+    self.settings.load_configs()
+  File "/usr/lib/python3/dist-packages/cliapp/settings.py", line 829, in load_configs
+    self._read_ini(pathname, f)
+  File "/usr/lib/python3/dist-packages/cliapp/settings.py", line 838, in _read_ini
+    cp.read_file(f)
+  File "/usr/lib/python3.12/configparser.py", line 705, in read_file
+    self._read(f, source)
+  File "/usr/lib/python3.12/configparser.py", line 1064, in _read
+    raise MissingSectionHeaderError(fpname, lineno, line)
+configparser.MissingSectionHeaderError: File contains no section headers.
+file: '/home/kurumilla/notes-app/config/webpack/development.js', line: 1
+"process.env.NODE_ENV = process.env.NODE_ENV || 'development'\n"
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/cliapp/app.py", line 182, in _run
+    self.settings.load_configs()
+  File "/usr/lib/python3/dist-packages/cliapp/settings.py", line 829, in load_configs
+    self._read_ini(pathname, f)
+  File "/usr/lib/python3/dist-packages/cliapp/settings.py", line 838, in _read_ini
+    cp.read_file(f)
+  File "/usr/lib/python3.12/configparser.py", line 705, in read_file
+    self._read(f, source)
+  File "/usr/lib/python3.12/configparser.py", line 1064, in _read
+    raise MissingSectionHeaderError(fpname, lineno, line)
+configparser.MissingSectionHeaderError: File contains no section headers.
+file: '/home/kurumilla/notes-app/config/webpack/development.js', line: 1
+"process.env.NODE_ENV = process.env.NODE_ENV || 'development'\n"
+
+  Rendered layout layouts/application.html.erb (Duration: 434.2ms | Allocations: 6103)
+Completed 500 Internal Server Error in 435ms (ActiveRecord: 0.1ms | Allocations: 6609)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/kurumilla/notes-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-06 03:19:10 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 03:19:10 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2322)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[31m[1mSyntax Error[22m[39m: Expected ":" or blank space but "\n" found.
+    at mu (/home/kurumilla/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:51:1188)
+    at R6e (/home/kurumilla/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:51:10628)
+    at L6e (/home/kurumilla/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:64:16)
+    at O6e (/home/kurumilla/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:64:58)
+    at Ki (/home/kurumilla/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:64:434)
+    at t.setupResolutions (/home/kurumilla/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:210:329)
+    at async t.find (/home/kurumilla/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:207:10477)
+    at async qE.execute (/home/kurumilla/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:518:307)
+    at async qE.validateAndExecute (/home/kurumilla/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:94:787)
+    at async t.run (/home/kurumilla/.cache/node/corepack/v1/yarn/4.5.3/yarn.js:98:3249)
+
+  Rendered layout layouts/application.html.erb (Duration: 1341.7ms | Allocations: 14750)
+Completed 500 Internal Server Error in 1353ms (ActiveRecord: 0.7ms | Allocations: 19633)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/kurumilla/notes-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-06 03:41:55 -0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 03:41:55 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2322)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning ../package.json: No license field
+/home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `exec': Permission denied - /home/kurumilla/notes-app/node_modules/.bin/webpack (Errno::EACCES)
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `block in run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `chdir'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 805.1ms | Allocations: 14758)
+Completed 500 Internal Server Error in 817ms (ActiveRecord: 0.8ms | Allocations: 19641)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/kurumilla/notes-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-06 03:44:26 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 03:44:26 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2322)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning ../package.json: No license field
+/home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `exec': Permission denied - /home/kurumilla/notes-app/node_modules/.bin/webpack (Errno::EACCES)
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `block in run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `chdir'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 598.0ms | Allocations: 14747)
+Completed 500 Internal Server Error in 606ms (ActiveRecord: 0.4ms | Allocations: 19630)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/kurumilla/notes-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-06 03:46:20 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 03:46:20 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2322)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning ../package.json: No license field
+/home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `exec': Permission denied - /home/kurumilla/notes-app/node_modules/.bin/webpack (Errno::EACCES)
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `block in run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `chdir'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 572.7ms | Allocations: 14750)
+Completed 500 Internal Server Error in 580ms (ActiveRecord: 0.3ms | Allocations: 19633)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/kurumilla/notes-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-06 03:47:46 -0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 03:47:46 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2322)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning ../package.json: No license field
+/home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `exec': Permission denied - /home/kurumilla/notes-app/node_modules/.bin/webpack (Errno::EACCES)
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `block in run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `chdir'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 663.5ms | Allocations: 14749)
+Completed 500 Internal Server Error in 675ms (ActiveRecord: 0.6ms | Allocations: 19632)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/kurumilla/notes-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-06 03:48:28 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 03:48:28 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2322)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning ../package.json: No license field
+/home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `exec': Permission denied - /home/kurumilla/notes-app/node_modules/.bin/webpack (Errno::EACCES)
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `block in run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `chdir'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 801.6ms | Allocations: 14748)
+Completed 500 Internal Server Error in 814ms (ActiveRecord: 0.8ms | Allocations: 19631)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/kurumilla/notes-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-06 03:52:06 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 03:52:06 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2322)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning ../package.json: No license field
+/home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `exec': Permission denied - /home/kurumilla/notes-app/node_modules/.bin/webpack (Errno::EACCES)
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `block in run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `chdir'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 549.0ms | Allocations: 4999)
+Completed 500 Internal Server Error in 557ms (ActiveRecord: 0.3ms | Allocations: 9882)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/kurumilla/notes-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+  
+app/views/layouts/application.html.erb:9
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-06 03:53:06 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 03:53:06 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2322)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning ../package.json: No license field
+/home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `exec': Permission denied - /home/kurumilla/notes-app/node_modules/.bin/webpack (Errno::EACCES)
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `block in run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `chdir'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 570.1ms | Allocations: 14748)
+Completed 500 Internal Server Error in 577ms (ActiveRecord: 0.3ms | Allocations: 19631)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/kurumilla/notes-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-06 04:00:12 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 04:00:12 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2322)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/kurumilla/notes-app/public/packs
+[Webpacker] warning ../package.json: No license field
+
+[Webpacker] Hash: db4ac48247b213ead126
+Version: webpack 4.46.0
+Time: 1137ms
+Built at: 12/06/2024 4:00:15 AM
+                                                 Asset       Size                   Chunks                         Chunk Names
+                js/application-0fe304a1dfee191311a1.js    504 KiB              application  [emitted] [immutable]  application
+            js/application-0fe304a1dfee191311a1.js.map    595 KiB              application  [emitted] [dev]        application
+    js/stylesheets/application-795a9dc9fd71e3a8dce9.js     16 KiB  stylesheets/application  [emitted] [immutable]  stylesheets/application
+js/stylesheets/application-795a9dc9fd71e3a8dce9.js.map   16.3 KiB  stylesheets/application  [emitted] [dev]        stylesheets/application
+                                         manifest.json  787 bytes                           [emitted]              
+Entrypoint application = js/application-0fe304a1dfee191311a1.js js/application-0fe304a1dfee191311a1.js.map
+Entrypoint stylesheets/application = js/stylesheets/application-795a9dc9fd71e3a8dce9.js js/stylesheets/application-795a9dc9fd71e3a8dce9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 922 bytes {application} [built]
+[./app/javascript/packs/stylesheets/application.scss] 676 bytes {stylesheets/application} {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/stylesheets/application.scss 318 bytes {application} {stylesheets/application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 2427.6ms | Allocations: 14626)
+Completed 200 OK in 2439ms (Views: 2430.0ms | ActiveRecord: 0.8ms | Allocations: 19565)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2024-12-06 04:00:44 -0800
+Processing by NotesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 14.6ms | Allocations: 5352)
+  Rendered notes/new.html.erb within layouts/application (Duration: 15.7ms | Allocations: 5656)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 10380)
+Completed 200 OK in 27ms (Views: 22.6ms | ActiveRecord: 0.2ms | Allocations: 13858)
+
+
+Started POST "/notes" for 127.0.0.1 at 2024-12-06 04:01:04 -0800
+Processing by NotesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"Mi primera nota de prueba", "body"=>"Es interesante como me tarde demasiado en hacer que jale el proyecto jajaja"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mNote Create (2.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Mi primera nota de prueba"], ["body", "Es interesante como me tarde demasiado en hacer que jale el proyecto jajaja"], ["created_at", "2024-12-06 12:01:04.544791"], ["updated_at", "2024-12-06 12:01:04.544791"]]
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+Redirected to http://127.0.0.1:3000/notes/1
+Completed 302 Found in 13ms (ActiveRecord: 7.8ms | Allocations: 5130)
+
+
+Started GET "/notes/1" for 127.0.0.1 at 2024-12-06 04:01:04 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 596)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 5328)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.1ms | Allocations: 7239)
+
+
+Started DELETE "/notes/1" for 127.0.0.1 at 2024-12-06 04:01:12 -0800
+Processing by NotesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:52:in `destroy'
+  [1m[36mNote Destroy (0.2ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/notes_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/notes
+Completed 302 Found in 15ms (ActiveRecord: 9.9ms | Allocations: 4176)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 04:01:12 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 725)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 5302)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 5862)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-06 04:17:26 -0800
+Started GET "/notes" for 127.0.0.1 at 2024-12-06 04:17:26 -0800
+Processing by NotesController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 722)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5301)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.3ms | Allocations: 6363)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/notes-app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-07 02:23:40 -0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:23:40 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2319)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 82.8ms | Allocations: 13758)
+Completed 200 OK in 96ms (Views: 85.4ms | ActiveRecord: 0.8ms | Allocations: 18864)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:23:42 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 724)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 5304)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms | Allocations: 5947)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:25:59 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 703)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 5280)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms | Allocations: 5823)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:26:00 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 711)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 5290)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 5845)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:26:00 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 711)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 5290)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 5838)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:26:00 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 703)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 5280)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 5829)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:26:01 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 703)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 5280)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.2ms | Allocations: 5821)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:26:01 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 703)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 5280)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.1ms | Allocations: 5817)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:26:01 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 711)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 5289)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.1ms | Allocations: 5841)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:26:42 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 703)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 5328)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.1ms | Allocations: 5868)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2024-12-07 02:26:53 -0800
+Processing by NotesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 12.3ms | Allocations: 4981)
+  Rendered notes/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 5287)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 10041)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.2ms | Allocations: 13381)
+
+
+Started POST "/notes" for 127.0.0.1 at 2024-12-07 02:27:02 -0800
+Processing by NotesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"The Game", "body"=>"Este si es un gran the game"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mNote Create (0.7ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "The Game"], ["body", "Este si es un gran the game"], ["created_at", "2024-12-07 10:27:02.526657"], ["updated_at", "2024-12-07 10:27:02.526657"]]
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+Redirected to http://127.0.0.1:3000/notes/2
+Completed 302 Found in 14ms (ActiveRecord: 7.5ms | Allocations: 5103)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2024-12-07 02:27:02 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5325)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 7234)
+
+
+Started GET "/notes/2/edit" for 127.0.0.1 at 2024-12-07 02:27:17 -0800
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 1.0ms | Allocations: 638)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 783)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5351)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 6438)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:27:18 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 779)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5356)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 5910)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2024-12-07 02:27:19 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4765)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 5669)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:27:20 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 765)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 5342)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 5883)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2024-12-07 02:27:22 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4765)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.1ms | Allocations: 5683)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:27:23 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 764)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 5342)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.1ms | Allocations: 5874)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2024-12-07 02:27:24 -0800
+Processing by NotesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 1.3ms | Allocations: 536)
+  Rendered notes/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 5209)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 5721)
+
+
+Started POST "/notes" for 127.0.0.1 at 2024-12-07 02:27:36 -0800
+Processing by NotesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"Esta es una nota", "body"=>"Lorem Imspun que me invente"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Esta es una nota"], ["body", "Lorem Imspun que me invente"], ["created_at", "2024-12-07 10:27:36.473395"], ["updated_at", "2024-12-07 10:27:36.473395"]]
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+Redirected to http://127.0.0.1:3000/notes/3
+Completed 302 Found in 10ms (ActiveRecord: 5.3ms | Allocations: 4062)
+
+
+Started GET "/notes/3" for 127.0.0.1 at 2024-12-07 02:27:36 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4768)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 5709)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:28:14 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 5402)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 5945)
+
+
+Started GET "/notes?filters%5Btitle%5D=the" for 127.0.0.1 at 2024-12-07 02:28:34 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"the"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%the%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 805)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 5382)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 6105)
+
+
+Started GET "/notes?filters%5Btitle%5D=" for 127.0.0.1 at 2024-12-07 02:28:39 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>""}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 5402)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 5954)
+
+
+Started GET "/notes?filters%5Btitle%5D=e" for 127.0.0.1 at 2024-12-07 02:28:45 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"e"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%e%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 844)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 5421)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 6037)
+
+
+Started GET "/notes?filters%5Btitle%5D=me" for 127.0.0.1 at 2024-12-07 02:28:49 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"me"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%me%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 783)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 5360)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 5958)
+
+
+Started GET "/notes?filters%5Btitle%5D=g+e" for 127.0.0.1 at 2024-12-07 02:28:52 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"g e"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%g%' ESCAPE '\') AND (title LIKE '%e%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 799)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 5376)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 6013)
+
+
+Started GET "/notes?filters%5Btitle%5D=g+a" for 127.0.0.1 at 2024-12-07 02:28:54 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"g a"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%g%' ESCAPE '\') AND (title LIKE '%a%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 791)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5368)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 6002)
+
+
+Started GET "/notes?filters%5Btitle%5D=ge" for 127.0.0.1 at 2024-12-07 02:28:56 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"ge"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%ge%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 723)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5377)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 5970)
+
+
+Started GET "/notes?filters%5Btitle%5D=Ge" for 127.0.0.1 at 2024-12-07 02:28:59 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"Ge"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%Ge%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 722)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 5341)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 5960)
+
+
+Started GET "/notes?filters%5Btitle%5D=" for 127.0.0.1 at 2024-12-07 02:29:00 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>""}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 5435)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 6010)
+
+
+Started GET "/notes?filters%5Btitle%5D=game" for 127.0.0.1 at 2024-12-07 02:29:20 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"game"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%game%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 783)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 5360)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 5968)
+
+
+Started GET "/notes?filters%5Btitle%5D=the" for 127.0.0.1 at 2024-12-07 02:29:22 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"the"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%the%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 783)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5360)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 5960)
+
+
+Started GET "/notes?filters%5Btitle%5D=" for 127.0.0.1 at 2024-12-07 02:29:24 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>""}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 5402)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.2ms | Allocations: 5960)
+
+
+Started GET "/notes?filters%5Btitle%5D=nota" for 127.0.0.1 at 2024-12-07 02:29:35 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"nota"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%nota%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 783)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5360)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 5965)
+
+
+Started GET "/notes?filters%5Btitle%5D=" for 127.0.0.1 at 2024-12-07 02:29:36 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>""}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 5402)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 5960)
+
+
+Started GET "/notes?filters%5Btitle%5D=es" for 127.0.0.1 at 2024-12-07 02:29:59 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"es"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%es%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 783)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 5360)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 5958)
+
+
+Started GET "/notes?filters%5Btitle%5D=una+es" for 127.0.0.1 at 2024-12-07 02:30:01 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"una es"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%una%' ESCAPE '\') AND (title LIKE '%es%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 791)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5368)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 6004)
+
+
+Started GET "/notes?filters%5Btitle%5D=nota+esta+una+es" for 127.0.0.1 at 2024-12-07 02:30:06 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"nota esta una es"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%nota%' ESCAPE '\') AND (title LIKE '%esta%' ESCAPE '\') AND (title LIKE '%una%' ESCAPE '\') AND (title LIKE '%es%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 800)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 5451)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 6134)
+
+
+Started GET "/notes?filters%5Btitle%5D=" for 127.0.0.1 at 2024-12-07 02:30:07 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>""}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 5444)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 6003)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2024-12-07 02:30:16 -0800
+Processing by NotesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 1.0ms | Allocations: 536)
+  Rendered notes/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5196)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 5708)
+
+
+Started POST "/notes" for 127.0.0.1 at 2024-12-07 02:30:21 -0800
+Processing by NotesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"¡Es una poderosa nota!", "body"=>""}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 2.3ms | Allocations: 1526)
+  Rendered notes/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 6153)
+Completed 422 Unprocessable Entity in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 6954)
+
+
+Started POST "/notes" for 127.0.0.1 at 2024-12-07 02:31:17 -0800
+Processing by NotesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"¿¡Es una poderosa nota/anotación!?", "body"=>"¿Podrá con caracteres especiales?"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mNote Create (0.3ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "¿¡Es una poderosa nota/anotación!?"], ["body", "¿Podrá con caracteres especiales?"], ["created_at", "2024-12-07 10:31:17.399555"], ["updated_at", "2024-12-07 10:31:17.399555"]]
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+Redirected to http://127.0.0.1:3000/notes/4
+Completed 302 Found in 13ms (ActiveRecord: 6.6ms | Allocations: 3933)
+
+
+Started GET "/notes/4" for 127.0.0.1 at 2024-12-07 02:31:17 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 191)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4768)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 5691)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:31:19 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5465)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 6014)
+
+
+Started GET "/notes?filters%5Btitle%5D=%C2%A1" for 127.0.0.1 at 2024-12-07 02:31:23 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"¡"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%¡%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 790)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5367)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 5969)
+
+
+Started GET "/notes?filters%5Btitle%5D=%C2%BF" for 127.0.0.1 at 2024-12-07 02:31:24 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"¿"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%¿%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 786)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 5363)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 5961)
+
+
+Started GET "/notes?filters%5Btitle%5D=%27" for 127.0.0.1 at 2024-12-07 02:31:25 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"'"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%''%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 722)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 5299)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 5902)
+
+
+Started GET "/notes?filters%5Btitle%5D=%3F" for 127.0.0.1 at 2024-12-07 02:31:27 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"?"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%?%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 787)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5408)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 6002)
+
+
+Started GET "/notes?filters%5Btitle%5D=%2F" for 127.0.0.1 at 2024-12-07 02:31:30 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"filters"=>{"title"=>"/"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (title LIKE '%/%' ESCAPE '\') ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 786)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 5395)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms | Allocations: 6007)
+
+
+Started GET "/notes/4" for 127.0.0.1 at 2024-12-07 02:31:35 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4767)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 5677)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:31:41 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 5465)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 6001)
+
+
+Started GET "/notes/4" for 127.0.0.1 at 2024-12-07 02:31:46 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4766)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.1ms | Allocations: 5669)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:32:03 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 5465)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 6007)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2024-12-07 02:32:04 -0800
+Processing by NotesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 0.7ms | Allocations: 536)
+  Rendered notes/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 5163)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 5669)
+
+
+Started POST "/notes" for 127.0.0.1 at 2024-12-07 02:32:47 -0800
+Processing by NotesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"¡Ya comprobé muchas cosas!", "body"=>"Aquí menciona que debería respetar los saltos de linea...\r\n\r\n¿Será que funcionarán los saltos del linea que estoy realizando?"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "¡Ya comprobé muchas cosas!"], ["body", "Aquí menciona que debería respetar los saltos de linea...\r\n\r\n¿Será que funcionarán los saltos del linea que estoy realizando?"], ["created_at", "2024-12-07 10:32:47.802975"], ["updated_at", "2024-12-07 10:32:47.802975"]]
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+Redirected to http://127.0.0.1:3000/notes/5
+Completed 302 Found in 16ms (ActiveRecord: 9.5ms | Allocations: 3947)
+
+
+Started GET "/notes/5" for 127.0.0.1 at 2024-12-07 02:32:47 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 191)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 4768)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 5705)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:32:58 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 951)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 5564)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 6103)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2024-12-07 02:33:00 -0800
+Processing by NotesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 1.0ms | Allocations: 536)
+  Rendered notes/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5200)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 5712)
+
+
+Started POST "/notes" for 127.0.0.1 at 2024-12-07 02:33:08 -0800
+Processing by NotesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"Una notita para ir borrando!", "body"=>"sadadasdasd"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Una notita para ir borrando!"], ["body", "sadadasdasd"], ["created_at", "2024-12-07 10:33:08.082773"], ["updated_at", "2024-12-07 10:33:08.082773"]]
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+Redirected to http://127.0.0.1:3000/notes/6
+Completed 302 Found in 10ms (ActiveRecord: 6.0ms | Allocations: 3943)
+
+
+Started GET "/notes/6" for 127.0.0.1 at 2024-12-07 02:33:08 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4810)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.1ms | Allocations: 5735)
+
+
+Started DELETE "/notes/6" for 127.0.0.1 at 2024-12-07 02:33:13 -0800
+Processing by NotesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"6"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:52:in `destroy'
+  [1m[36mNote Destroy (0.2ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/notes_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/notes
+Completed 302 Found in 11ms (ActiveRecord: 5.6ms | Allocations: 4075)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:33:13 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 953)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 5530)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 6101)
+
+
+Started GET "/notes/5" for 127.0.0.1 at 2024-12-07 02:33:23 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4766)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 5680)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:33:25 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 951)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 5528)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 6071)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2024-12-07 02:33:26 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 4765)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 5669)
+
+
+Started GET "/notes/2/edit" for 127.0.0.1 at 2024-12-07 02:33:29 -0800
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 0.9ms | Allocations: 567)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 1.0ms | Allocations: 626)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 5194)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 6106)
+
+
+Started PATCH "/notes/2" for 127.0.0.1 at 2024-12-07 02:33:38 -0800
+Processing by NotesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"The Game", "body"=>"Este si es un gran the game, que por lo visto puedo modificar sin problemas!"}, "id"=>"2"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:41:in `block in update'
+  [1m[36mNote Update (0.2ms)[0m  [1m[33mUPDATE "notes" SET "body" = ?, "updated_at" = ? WHERE "notes"."id" = ?[0m  [["body", "Este si es un gran the game, que por lo visto puedo modificar sin problemas!"], ["updated_at", "2024-12-07 10:33:38.143659"], ["id", 2]]
+  ↳ app/controllers/notes_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:41:in `block in update'
+Redirected to http://127.0.0.1:3000/notes/2
+Completed 302 Found in 13ms (ActiveRecord: 6.2ms | Allocations: 4567)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2024-12-07 02:33:38 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 4840)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 5767)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:33:58 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 951)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 5528)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 6063)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2024-12-07 02:33:59 -0800
+Processing by NotesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 0.9ms | Allocations: 536)
+  Rendered notes/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 5206)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 5700)
+
+
+Started POST "/notes" for 127.0.0.1 at 2024-12-07 02:34:06 -0800
+Processing by NotesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"", "body"=>""}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 2.5ms | Allocations: 2294)
+  Rendered notes/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2353)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 6921)
+Completed 422 Unprocessable Entity in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 7676)
+
+
+Started POST "/notes" for 127.0.0.1 at 2024-12-07 02:34:23 -0800
+Processing by NotesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"No quiero llenar el titulo", "body"=>""}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 2.5ms | Allocations: 1404)
+  Rendered notes/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1463)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 6031)
+Completed 422 Unprocessable Entity in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 6769)
+
+
+Started POST "/notes" for 127.0.0.1 at 2024-12-07 02:34:30 -0800
+Processing by NotesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"", "body"=>"No quiero llenar el cuerpo"}}
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 2.1ms | Allocations: 1404)
+  Rendered notes/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1463)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 6031)
+Completed 422 Unprocessable Entity in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 6781)
+
+
+Started POST "/notes" for 127.0.0.1 at 2024-12-07 02:35:29 -0800
+Processing by NotesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"¡¡UNA NOTA SUPER LARGA!!", "body"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum accumsan leo id euismod. Nulla quis risus nulla. Quisque vitae mattis dolor. Vivamus ac risus id ex cursus ullamcorper. Praesent arcu nulla, lobortis non mi vel, bibendum condimentum est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce leo ex, luctus et neque nec, faucibus tempor ligula. Praesent accumsan tellus ac nibh dapibus pellentesque. Nulla facilisi. Aenean et nunc non nulla facilisis porttitor a pellentesque magna.\r\n\r\nUt pretium velit in vestibulum rhoncus. Cras mollis tempus rhoncus. In egestas fermentum sapien, sit amet consectetur risus placerat non. Aliquam vitae gravida eros. Aenean et ligula urna. Nullam ut sodales velit, sit amet iaculis lacus. Fusce sed massa dignissim, blandit mauris sed, mollis quam. Nullam dui elit, mollis vel turpis ut, porta ultrices eros. Cras lobortis mauris eget dolor ultrices, id rutrum risus sagittis. Sed lacinia varius augue, tincidunt mattis lacus dictum sit amet. Duis eget risus sit amet elit accumsan mattis nec quis nunc. Donec sit amet ullamcorper elit, eget vehicula nunc. Curabitur rutrum laoreet convallis. Mauris pulvinar, orci non volutpat tempor, lorem odio lacinia massa, ac elementum nibh odio sed ipsum. Phasellus condimentum non augue vitae consectetur.\r\n\r\nPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin cursus tincidunt sem. Nulla varius aliquam egestas. Nulla non fringilla justo, non interdum nibh. Cras eu erat enim. Ut sed suscipit risus. Integer sed sollicitudin nibh, nec aliquet ex. Vivamus porta mi ut massa pretium tempus. In a eros malesuada, malesuada magna bibendum, varius purus. Maecenas quis mi ac ligula scelerisque lobortis. Morbi neque nunc, maximus ut imperdiet cursus, iaculis sit amet quam. Quisque pretium enim turpis, at condimentum ipsum aliquet sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sapien a diam consectetur lacinia. Sed lorem sem, bibendum vitae fermentum eget, tincidunt nec enim. Phasellus sit amet vulputate erat, et tempus nibh."}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "¡¡UNA NOTA SUPER LARGA!!"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum accumsan leo id euismod. Nulla quis risus nulla. Quisque vitae mattis dolor. Vivamus ac risus id ex cursus ullamcorper. Praesent arcu nulla, lobortis non mi vel, bibendum condimentum est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce leo ex, luctus et neque nec, faucibus tempor ligula. Praesent accumsan tellus ac nibh dapibus pellentesque. Nulla facilisi. Aenean et nunc non nulla facilisis porttitor a pellentesque magna.\r\n\r\nUt pretium velit in vestibulum rhoncus. Cras mollis tempus rhoncus. In egestas fermentum sapien, sit amet consectetur risus placerat non. Aliquam vitae gravida eros. Aenean et ligula urna. Nullam ut sodales velit, sit amet iaculis lacus. Fusce sed massa dignissim, blandit mauris sed, mollis quam. Nullam dui elit, mollis vel turpis ut, porta ultrices eros. Cras lobortis mauris eget dolor ultrices, id rutrum risus sagittis. Sed lacinia varius augue, tincidunt mattis lacus dictum sit amet. Duis eget risus sit amet elit accumsan mattis nec quis nunc. Donec sit amet ullamcorper elit, eget vehicula nunc. Curabitur rutrum laoreet convallis. Mauris pulvinar, orci non volutpat tempor, lorem odio lacinia massa, ac elementum nibh odio sed ipsum. Phasellus condimentum non augue vitae consectetur.\r\n\r\nPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin cursus tincidunt sem. Nulla varius aliquam egestas. Nulla non fringilla justo, non interdum nibh. Cras eu erat enim. Ut sed suscipit risus. Integer sed sollicitudin nibh, nec aliquet ex. Vivamus porta mi ut massa pretium tempus. In a eros malesuada, malesuada magna bibendum, varius purus. Maecenas quis mi ac ligula scelerisque lobortis. Morbi neque nunc, maximus ut imperdiet cursus, iaculis sit amet quam. Quisque pretium enim turpis, at condimentum ipsum aliquet sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget sapien a diam consectetur lacinia. Sed lorem sem, bibendum vitae fermentum eget, tincidunt nec enim. Phasellus sit amet vulputate erat, et tempus nibh."], ["created_at", "2024-12-07 10:35:29.409552"], ["updated_at", "2024-12-07 10:35:29.409552"]]
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/notes_controller.rb:29:in `block in create'
+Redirected to http://127.0.0.1:3000/notes/7
+Completed 302 Found in 10ms (ActiveRecord: 5.5ms | Allocations: 3923)
+
+
+Started GET "/notes/7" for 127.0.0.1 at 2024-12-07 02:35:29 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:62:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 4770)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 5705)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-07 02:35:45 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1013)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5663)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 6196)
+
+
