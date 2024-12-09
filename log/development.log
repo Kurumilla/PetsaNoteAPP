@@ -2225,3 +2225,403 @@ Processing by NotesController#index as HTML
 Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 6196)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/git/PetsaNoteAPP/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-09 01:47:22 -0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 01:47:22 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 5370)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning ../../package.json: No license field
+/home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `exec': Permission denied - /home/kurumilla/git/PetsaNoteAPP/node_modules/.bin/webpack (Errno::EACCES)
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `block in run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `chdir'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 628.5ms | Allocations: 17580)
+Completed 200 OK in 641ms (Views: 630.8ms | ActiveRecord: 1.0ms | Allocations: 22696)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 01:48:20 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 6639)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 8185)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 01:48:39 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1021)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning ../../package.json: No license field
+/home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `exec': Permission denied - /home/kurumilla/git/PetsaNoteAPP/node_modules/.bin/webpack (Errno::EACCES)
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:23:in `block in run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `chdir'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/webpack_runner.rb:22:in `run'
+	from /home/kurumilla/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/webpacker-5.4.0/lib/webpacker/runner.rb:6:in `run'
+	from ./bin/webpack:17:in `block in <main>'
+	from ./bin/webpack:16:in `chdir'
+	from ./bin/webpack:16:in `<main>'
+
+  Rendered layout layouts/application.html.erb (Duration: 551.3ms | Allocations: 6271)
+Completed 200 OK in 552ms (Views: 551.6ms | ActiveRecord: 0.1ms | Allocations: 6891)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/git/PetsaNoteAPP/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-09 01:51:34 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 01:51:35 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 5370)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.7ms | Allocations: 16829)
+Completed 200 OK in 81ms (Views: 69.7ms | ActiveRecord: 0.9ms | Allocations: 21933)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 01:52:00 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1034)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning ../../package.json: No license field
+Error: error:0308010C:digital envelope routines::unsupported
+    at new Hash (node:internal/crypto/hash:69:19)
+    at Object.createHash (node:crypto:133:10)
+    at module.exports (/home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/util/createHash.js:135:53)
+    at NormalModule._initBuildHash (/home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/NormalModule.js:417:16)
+    at handleParseError (/home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/NormalModule.js:471:10)
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/NormalModule.js:503:5
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/NormalModule.js:358:12
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/loader-runner/lib/LoaderRunner.js:373:3
+    at iterateNormalLoaders (/home/kurumilla/git/PetsaNoteAPP/node_modules/loader-runner/lib/LoaderRunner.js:214:10)
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/loader-runner/lib/LoaderRunner.js:186:6
+    at runSyncOrAsync (/home/kurumilla/git/PetsaNoteAPP/node_modules/loader-runner/lib/LoaderRunner.js:130:11)
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/loader-runner/lib/LoaderRunner.js:178:3
+    at loadLoader (/home/kurumilla/git/PetsaNoteAPP/node_modules/loader-runner/lib/loadLoader.js:47:3)
+    at iteratePitchingLoaders (/home/kurumilla/git/PetsaNoteAPP/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/home/kurumilla/git/PetsaNoteAPP/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/NormalModule.js:295:3)
+    at NormalModule.build (/home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/NormalModule.js:446:15)
+    at Compilation.buildModule (/home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/Compilation.js:739:10)
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/Compilation.js:1111:12
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/NormalModuleFactory.js:409:6
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/NormalModuleFactory.js:155:13
+    at eval (eval at create (/home/kurumilla/git/PetsaNoteAPP/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:14:1)
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/case-sensitive-paths-webpack-plugin/index.js:178:9
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/case-sensitive-paths-webpack-plugin/index.js:125:7
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/case-sensitive-paths-webpack-plugin/index.js:125:7
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/case-sensitive-paths-webpack-plugin/index.js:125:7
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/case-sensitive-paths-webpack-plugin/index.js:125:7
+    at CaseSensitivePathsPlugin.fileExistsWithCase (/home/kurumilla/git/PetsaNoteAPP/node_modules/case-sensitive-paths-webpack-plugin/index.js:95:5)
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/case-sensitive-paths-webpack-plugin/index.js:118:10
+    at Array.<anonymous> (/home/kurumilla/git/PetsaNoteAPP/node_modules/case-sensitive-paths-webpack-plugin/index.js:72:5)
+node:internal/crypto/hash:69
+  this[kHandle] = new _Hash(algorithm, xofLen);
+                  ^
+
+Error: error:0308010C:digital envelope routines::unsupported
+    at new Hash (node:internal/crypto/hash:69:19)
+    at Object.createHash (node:crypto:133:10)
+    at module.exports (/home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/util/createHash.js:135:53)
+    at NormalModule._initBuildHash (/home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/NormalModule.js:417:16)
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/NormalModule.js:452:10
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/webpack/lib/NormalModule.js:323:13
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/loader-runner/lib/LoaderRunner.js:367:11
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/loader-runner/lib/LoaderRunner.js:233:18
+    at context.callback (/home/kurumilla/git/PetsaNoteAPP/node_modules/loader-runner/lib/LoaderRunner.js:111:13)
+    at /home/kurumilla/git/PetsaNoteAPP/node_modules/babel-loader/lib/index.js:59:103 {
+  opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+  library: 'digital envelope routines',
+  reason: 'unsupported',
+  code: 'ERR_OSSL_EVP_UNSUPPORTED'
+}
+
+Node.js v18.19.1
+
+  Rendered layout layouts/application.html.erb (Duration: 2334.2ms | Allocations: 6375)
+Completed 200 OK in 2336ms (Views: 2334.6ms | ActiveRecord: 0.1ms | Allocations: 7011)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/git/PetsaNoteAPP/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-09 01:56:40 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 01:56:40 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 5369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.0ms | Allocations: 16826)
+Completed 200 OK in 65ms (Views: 55.8ms | ActiveRecord: 1.0ms | Allocations: 21932)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 01:57:06 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1034)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/kurumilla/git/PetsaNoteAPP/public/packs
+[Webpacker] warning ../../package.json: No license field
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 7109f52ed586ee53b17a
+Version: webpack 4.46.0
+Time: 3243ms
+Built at: 12/09/2024 1:57:11 AM
+                                                 Asset       Size                   Chunks                         Chunk Names
+                js/application-c29fb5baaa5b901be5f3.js    504 KiB              application  [emitted] [immutable]  application
+            js/application-c29fb5baaa5b901be5f3.js.map    595 KiB              application  [emitted] [dev]        application
+    js/stylesheets/application-795a9dc9fd71e3a8dce9.js     16 KiB  stylesheets/application  [emitted] [immutable]  stylesheets/application
+js/stylesheets/application-795a9dc9fd71e3a8dce9.js.map   16.3 KiB  stylesheets/application  [emitted] [dev]        stylesheets/application
+                                         manifest.json  787 bytes                           [emitted]              
+Entrypoint application = js/application-c29fb5baaa5b901be5f3.js js/application-c29fb5baaa5b901be5f3.js.map
+Entrypoint stylesheets/application = js/stylesheets/application-795a9dc9fd71e3a8dce9.js js/stylesheets/application-795a9dc9fd71e3a8dce9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 927 bytes {application} [built]
+[./app/javascript/packs/stylesheets/application.scss] 676 bytes {stylesheets/application} {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/stylesheets/application.scss 318 bytes {application} {stylesheets/application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 4784.5ms | Allocations: 6471)
+Completed 200 OK in 4785ms (Views: 4784.8ms | ActiveRecord: 0.1ms | Allocations: 7107)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 01:59:27 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1624)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: e153fe086b9b2a1d2966
+Version: webpack 4.46.0
+Time: 1520ms
+Built at: 12/09/2024 1:59:30 AM
+                                                 Asset      Size                   Chunks                         Chunk Names
+                js/application-27af7481d66fe1d4adb1.js   504 KiB              application  [emitted] [immutable]  application
+            js/application-27af7481d66fe1d4adb1.js.map   595 KiB              application  [emitted] [dev]        application
+    js/stylesheets/application-795a9dc9fd71e3a8dce9.js    16 KiB  stylesheets/application  [emitted] [immutable]  stylesheets/application
+js/stylesheets/application-795a9dc9fd71e3a8dce9.js.map  16.3 KiB  stylesheets/application  [emitted] [dev]        stylesheets/application
+                    js/tooltip-09f7110e22f4a2fe056c.js  3.99 KiB                  tooltip  [emitted] [immutable]  tooltip
+                js/tooltip-09f7110e22f4a2fe056c.js.map  3.71 KiB                  tooltip  [emitted] [dev]        tooltip
+                                         manifest.json  1.07 KiB                           [emitted]              
+Entrypoint application = js/application-27af7481d66fe1d4adb1.js js/application-27af7481d66fe1d4adb1.js.map
+Entrypoint stylesheets/application = js/stylesheets/application-795a9dc9fd71e3a8dce9.js js/stylesheets/application-795a9dc9fd71e3a8dce9.js.map
+Entrypoint tooltip = js/tooltip-09f7110e22f4a2fe056c.js js/tooltip-09f7110e22f4a2fe056c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 943 bytes {application} [built]
+[./app/javascript/packs/stylesheets/application.scss] 676 bytes {stylesheets/application} {application} [built]
+[./app/javascript/packs/tooltip.js] 123 bytes {tooltip} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/stylesheets/application.scss 318 bytes {application} {stylesheets/application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve './tooltips' in '/home/kurumilla/git/PetsaNoteAPP/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 11:0-20
+
+
+warning ../../package.json: No license field
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+  Rendered layout layouts/application.html.erb (Duration: 3081.9ms | Allocations: 7379)
+Completed 200 OK in 3084ms (Views: 3082.9ms | ActiveRecord: 0.5ms | Allocations: 8838)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 01:59:49 -0800
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/views/notes/index.html.erb:9
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1035)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/kurumilla/git/PetsaNoteAPP/public/packs
+[Webpacker] warning ../../package.json: No license field
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 913f284202298be501f6
+Version: webpack 4.46.0
+Time: 1053ms
+Built at: 12/09/2024 1:59:52 AM
+                                                 Asset      Size                   Chunks                         Chunk Names
+                js/application-6cdc4e29d0e31f2a1d13.js   505 KiB              application  [emitted] [immutable]  application
+            js/application-6cdc4e29d0e31f2a1d13.js.map   595 KiB              application  [emitted] [dev]        application
+    js/stylesheets/application-795a9dc9fd71e3a8dce9.js    16 KiB  stylesheets/application  [emitted] [immutable]  stylesheets/application
+js/stylesheets/application-795a9dc9fd71e3a8dce9.js.map  16.3 KiB  stylesheets/application  [emitted] [dev]        stylesheets/application
+                   js/tooltips-cfd1cb30bffd92c4fb8c.js     4 KiB                 tooltips  [emitted] [immutable]  tooltips
+               js/tooltips-cfd1cb30bffd92c4fb8c.js.map  3.71 KiB                 tooltips  [emitted] [dev]        tooltips
+                                         manifest.json  1.08 KiB                           [emitted]              
+Entrypoint application = js/application-6cdc4e29d0e31f2a1d13.js js/application-6cdc4e29d0e31f2a1d13.js.map
+Entrypoint stylesheets/application = js/stylesheets/application-795a9dc9fd71e3a8dce9.js js/stylesheets/application-795a9dc9fd71e3a8dce9.js.map
+Entrypoint tooltips = js/tooltips-cfd1cb30bffd92c4fb8c.js js/tooltips-cfd1cb30bffd92c4fb8c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 943 bytes {application} [built]
+[./app/javascript/packs/stylesheets/application.scss] 676 bytes {stylesheets/application} {application} [built]
+[./app/javascript/packs/tooltips.js] 123 bytes {tooltips} {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/stylesheets/application.scss 318 bytes {application} {stylesheets/application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 2189.7ms | Allocations: 6393)
+Completed 200 OK in 2191ms (Views: 2190.0ms | ActiveRecord: 0.2ms | Allocations: 7018)
+
+
