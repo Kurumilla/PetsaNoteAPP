@@ -3,13 +3,14 @@ class NotesController < ApplicationController
 
   def index
     @notes = Note.order(created_at: :desc)
-
+  
     filters = params[:filters]&.to_unsafe_h&.symbolize_keys
     if filters && filters[:title].present?
       @notes = @notes.search_by_title(filters[:title])
     end
-
-    @notes
+  
+    # Agrupa las notas por mes (nombre del mes y año)
+    @grouped_notes = @notes.group_by { |note| note.created_at.strftime('%B %Y') }
   end
 
   def show

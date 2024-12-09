@@ -2625,3 +2625,140 @@ Entrypoint tooltips = js/tooltips-cfd1cb30bffd92c4fb8c.js js/tooltips-cfd1cb30bf
 Completed 200 OK in 2191ms (Views: 2190.0ms | ActiveRecord: 0.2ms | Allocations: 7018)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/git/PetsaNoteAPP/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-09 12:20:06 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 12:20:06 -0800
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:13:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 13454)
+Completed 200 OK in 72ms (Views: 55.8ms | ActiveRecord: 0.8ms | Allocations: 22084)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 12:22:39 -0800
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:13:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 988)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 6054)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.5ms | Allocations: 8312)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 12:22:41 -0800
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:13:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 5055)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 6390)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 12:22:41 -0800
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:13:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 5055)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 6215)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 12:22:41 -0800
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:13:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 432)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 5051)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 6206)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 12:22:42 -0800
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:13:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 432)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 5051)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 6199)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 12:22:42 -0800
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:13:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 432)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 5051)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 6205)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 12:22:42 -0800
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:13:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 432)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 5051)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 6213)
+
+
+Started GET "/notes" for 127.0.0.1 at 2024-12-09 12:44:58 -0800
+Processing by NotesController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/notes_controller.rb:5:in `index'
+  [1m[36mNote Load (0.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:13:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 991)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 6128)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 1.0ms | Allocations: 8694)
+
+
