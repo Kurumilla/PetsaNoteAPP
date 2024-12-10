@@ -2,6 +2,65 @@
 *= require material_icons
 */
 @import "materialize/components/color-variables";
+
 $primary-color: color("red", "base") !default;
 $secondary-color: color("red", "base") !default;
+$background-color: color("grey", "lighten-5") !default;
+$text-color: color("grey", "darken-4") !default;
+
+$dark-primary-color: #1F1F1F;
+$dark-secondary-color: #1E1E1E;
+$dark-background-color: #121212;
+$dark-text-color: #E1E1E1;
+
 @import "materialize";
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+
+    &.dark-mode {
+        background-color: $dark-background-color;
+        color: $dark-text-color;
+
+        input, textarea{
+            color: $dark-text-color;
+        }
+
+        .card {
+            background-color: $dark-secondary-color;
+            color: $dark-text-color;
+
+            .card-title {
+                color: $dark-text-color;
+            }
+        }
+
+        .material-icons {
+            color: $dark-text-color;
+        }
+
+        
+    }
+}
+
+header, footer {
+    background-color: $primary-color;
+
+    &.dark-mode {
+        background-color: $dark-primary-color;
+    }
+}
+
+.card{
+    .card-title {
+        font-weight: 400;
+    }
+}
+
+.theme-toggle {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
