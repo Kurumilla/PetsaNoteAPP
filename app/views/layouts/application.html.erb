@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<script type="text/javascript">
+  window.translations = {
+    dark_mode: "<%= j t('dark_mode') %>",
+    light_mode: "<%= j t('light_mode') %>",
+  };
+</script>
 <html>
   <head>
     <title>My note collection</title>
@@ -13,16 +19,30 @@
   <body>
    <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper">
-          <%= link_to notes_path, class: 'brand-logo center' do %>
-            My note collection
-          <% end %>
+        <div class="nav-wrapper row">
+          <div class="col s4">
+            <ul class="left btn-language">
+              <li>
+                <%= link_to "ES", set_language_path('es'), class: 'btn' %>
+              </li>
+              <li>
+                <%= link_to "EN", set_language_path('en'), class: 'btn' %>
+              </li>
+            </ul>
+          </div>
+          <div class="col s4">
+            <%= link_to notes_path, class: 'brand-logo center' do %>
+              <%= t('title') %>
+            <% end %>
+          </div>
+          <div class="col s4">
+            <ul class="right btn-theme">
+              <li>
+                <button id="theme-toggle" class="btn-small theme-toggle"><%= t('dark_mode') %></button>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul class="right">
-          <li>
-            <button id="theme-toggle" class="btn-small waves-effect waves-light theme-toggle">Modo Oscuro</button>
-          </li>
-        </ul>
       </nav>
     </div>
 

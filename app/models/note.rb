@@ -1,5 +1,5 @@
 class Note < ApplicationRecord
-  validates :title, presence: true, uniqueness: { case_sensitive: false, message: 'is already in use, try another.' }
+  validates :title, presence: true, uniqueness: { case_sensitive: false }
   validates :body, presence: true
 
   def self.search_by_query(query)

@@ -33,14 +33,19 @@ document.addEventListener('turbolinks:load', function () {
   const isDarkMode = localStorage.getItem("darkMode") === "true";
   if (isDarkMode) {
     document.body.classList.add("dark-mode");
-    if (themeToggle) themeToggle.textContent = "Light Mode";
+    if (themeToggle) themeToggle.textContent = window.translations.dark_mode;
   }
 
   if (themeToggle) {
     themeToggle.addEventListener("click", () => {
       const isDarkMode = document.body.classList.toggle("dark-mode");
-      themeToggle.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
+      themeToggle.textContent = isDarkMode ? window.translations.light_mode : window.translations.dark_mode;
       localStorage.setItem("darkMode", isDarkMode);
     });
+  }
+
+  const savedLocale = localStorage.getItem('language');
+  if (savedLocale) {
+    document.documentElement.lang = savedLocale;
   }
 })

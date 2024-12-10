@@ -30,4 +30,32 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Hello"
+  title: "My note collection"
+  search_placeholder: "Search"
+  dark_mode: "Dark mode"
+  light_mode: "Light mode"
+  new_note: "New note"
+  tooltip_new: "New Note"
+
+  notes:
+    created: "Note created successfully."
+    updated: "Note was successfully updated."
+    deleted: "Note was successfully destroyed."
+    comfirm: "Are you sure?"
+  
+  forms:
+    notes:
+      input_title_label: "Title"
+      input_body_label: "Body"
+
+  errors:
+    notes:
+      count:
+        one: "prevented this note from being saved"
+        other: "prevented this note from being saved"
+
+  
+  
+  error_message: "No results found."
+  

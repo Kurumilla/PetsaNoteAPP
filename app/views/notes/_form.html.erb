@@ -1,8 +1,14 @@
 <%= form_with(model: note) do |form| %>
   <% if note.errors.any? %>
     <div id="error_explanation">
-      <h5><%= pluralize(note.errors.count, "error") %> prohibited this note from being saved:</h5>
-
+      <% if I18n.locale == :es %>
+        <h5>
+          <h5> <%= pluralize(note.errors.count, 'error', 'errores') %> <%= t('errors.notes.count', count: note.errors.count) %></h5>
+      <% else %>
+        <h5>
+          <h5> <%= pluralize(note.errors.count, 'error') %> <%= t('errors.notes.count', count: note.errors.count) %> </h5>
+        </h5>
+      <% end %>
       <ul>
         <% note.errors.each do |error| %>
           <li>&bull; <%= error.full_message %></li>
@@ -14,14 +20,14 @@
   <div class="row" style="margin-top: 7mm">
     <div class="input-field col s12">
       <%= form.text_field :title, autofocus: true %>
-      <%= form.label :title %>
+      <%= form.label :title, t('forms.notes.input_title_label') %>
     </div>
   </div>
 
   <div class="row">
     <div class="input-field col s12">
       <%= form.text_area :body, class: 'materialize-textarea' %>
-      <%= form.label :body %>
+      <%= form.label :body, t('forms.notes.input_body_label') %>
     </div>
   </div>
 

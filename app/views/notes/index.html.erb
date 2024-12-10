@@ -3,7 +3,7 @@
 <div class="row">
   <%= form_with url: notes_path, html: { class: 'input-field col s12' }, method: 'get' do |f| %>
     <%= material_icon.search.css_class('prefix') %>
-    <%= f.text_field :query, autofocus: true, placeholder: 'Search notes', value: params.dig(:filters, :query), class: "validate" %>
+    <%= f.text_field :query, autofocus: true, placeholder: t('search_placeholder'), value: params.dig(:filters, :query), class: "validate" %>
   <% end %>
 
   
@@ -36,7 +36,7 @@
 </div>
 
 <div class="fixed-action-btn">
-  <%= link_to new_note_path, title: 'New note', class: 'btn-floating btn-large pulse tooltipped', data: { tooltip: 'New Note', position: "left" } do %>
+  <%= link_to new_note_path, title: t('new_note'), class: 'btn-floating btn-large pulse tooltipped', data: { tooltip: t('new_note'), position: "left" } do %>
     <%= material_icon.add %>
   <% end %>
 </div>
