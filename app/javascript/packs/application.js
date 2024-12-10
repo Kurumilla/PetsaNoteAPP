@@ -27,4 +27,20 @@ document.addEventListener('turbolinks:load', function () {
   if (elems.length) {
     elems.forEach(elem => M.textareaAutoResize(elem))
   }
+
+  const themeToggle = document.getElementById("theme-toggle");
+
+  const isDarkMode = localStorage.getItem("darkMode") === "true";
+  if (isDarkMode) {
+    document.body.classList.add("dark-mode");
+    if (themeToggle) themeToggle.textContent = "Light Mode";
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const isDarkMode = document.body.classList.toggle("dark-mode");
+      themeToggle.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
+      localStorage.setItem("darkMode", isDarkMode);
+    });
+  }
 })
