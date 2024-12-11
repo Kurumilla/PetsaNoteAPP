@@ -57,8 +57,6 @@ build-iPhoneSimulator/
 
 # Archivos de base de datos
 /db/*.sqlite3
-/db/schema.rb
-/db/seeds.rb
 
 # Archivos de dependencias de npm
 /node_modules/
