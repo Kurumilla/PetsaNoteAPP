@@ -17,34 +17,25 @@
   </head>
 
   <body>
-   <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper row">
-          <div class="col s4">
-            <ul class="left btn-language">
-              <li>
-                <%= link_to "ES", set_language_path('es'), class: 'btn' %>
-              </li>
-              <li>
-                <%= link_to "EN", set_language_path('en'), class: 'btn' %>
-              </li>
-            </ul>
-          </div>
-          <div class="col s4">
-            <%= link_to notes_path, class: 'brand-logo center' do %>
-              <%= t('title') %>
-            <% end %>
-          </div>
-          <div class="col s4">
-            <ul class="right btn-theme">
-              <li>
-                <button id="theme-toggle" class="btn-small theme-toggle"><%= t('dark_mode') %></button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
+    <nav>
+      <div class="nav-wrapper">
+        <%= link_to notes_path, class: 'brand-logo center' do %>
+          <%= t('title') %>
+        <% end %>
+        <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><%= link_to "ES", set_language_path('es'), class: '' %></li>
+          <li><%= link_to "EN", set_language_path('en'), class: '' %></li>
+          <li><a id="theme-toggle" href="#" class=""><%= t('dark_mode') %></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><%= link_to "ES", set_language_path('es'), class: '' %></li>
+      <li><%= link_to "EN", set_language_path('en'), class: '' %></li>
+      <li><a id="theme-toggle" href="#" class=""><%= t('dark_mode') %></a></li>
+    </ul>
 
     <div class="container">
       <%= yield %>

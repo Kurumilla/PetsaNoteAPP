@@ -43,6 +43,13 @@ es:
     updated: "Nota actualizada exitosamente."
     deleted: "Nota destruida exitosamente."
     comfirm: "¿Estas seguro de eliminar esta nota?"
+    sorting:
+      label: "Ordenar notas por:"
+      newest_first: "Más reciente a más antiguo"
+      oldest_first: "Más antiguo a más reciente"
+      alphabetical_asc: "A-Z"
+      alphabetical_desc: "Z-A"
+      submit: "Aplicar"
 
   forms:
     notes:

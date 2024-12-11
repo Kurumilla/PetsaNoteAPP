@@ -3,8 +3,6 @@ document.addEventListener('turbolinks:load', function() {
   const selectOrder = document.querySelector('#order');
   
   if (savedOrder && savedOrder !== selectOrder.value) {
-
-    console.log('Se ha cambiado el orden')
     selectOrder.value = savedOrder;
     document.querySelector('#orderForm').submit();
   }

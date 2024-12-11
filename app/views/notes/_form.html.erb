@@ -3,7 +3,7 @@
     <div id="error_explanation">
       <% if I18n.locale == :es %>
         <h5>
-          <h5> <%= pluralize(note.errors.count, 'error', 'errores') %> <%= t('errors.notes.count', count: note.errors.count) %></h5>
+          <h5 class="error-title-note center-align"> <%= pluralize(note.errors.count, 'error', 'errores') %> <%= t('errors.notes.count', count: note.errors.count) %></h5>
       <% else %>
         <h5>
           <h5> <%= pluralize(note.errors.count, 'error') %> <%= t('errors.notes.count', count: note.errors.count) %> </h5>

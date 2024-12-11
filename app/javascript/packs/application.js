@@ -13,6 +13,8 @@ import "channels"
 
 import './tooltips';
 import './order';
+import './sidenav';
+import './theme';
 
 Rails.start()
 Turbolinks.start()
@@ -29,26 +31,12 @@ document.addEventListener('turbolinks:load', function () {
     elems.forEach(elem => M.textareaAutoResize(elem))
   }
 
-  const themeToggle = document.getElementById("theme-toggle");
-
-  const isDarkMode = localStorage.getItem("darkMode") === "true";
-  if (isDarkMode) {
-    document.body.classList.add("dark-mode");
-    if (themeToggle) themeToggle.textContent = window.translations.dark_mode;
-  }
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      const isDarkMode = document.body.classList.toggle("dark-mode");
-      themeToggle.textContent = isDarkMode ? window.translations.light_mode : window.translations.dark_mode;
-      localStorage.setItem("darkMode", isDarkMode);
-    });
-  }
-
   const savedLocale = localStorage.getItem('language');
   if (savedLocale) {
     document.documentElement.lang = savedLocale;
   }
-
-  
 })
+
+
+
+

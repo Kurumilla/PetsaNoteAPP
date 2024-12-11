@@ -4,21 +4,21 @@
   <div class="row not-margin-bottom">
     <div class="col s12">
         <div class="row valign-wrapper not-margin-bottom">
-          <div class="col s2">
-            <span class="order-text">Ordenar notas por:</span>
+          <div class="col s4 m2 center-align">
+            <span class="order-text"> <%= t('notes.sorting.label') %></span>
           </div>
-          <div class="col s8">
+          <div class="col s4 m8">
             <%= form_with url: notes_path, method: :get, html: { class: 'input-field select-dropdown game', id: 'orderForm' } do |f| %> 
             <%= f.select :order, options_for_select([
-              ['Más reciente a más antiguo', 'newest_first'],
-              ['Más antiguo a más reciente', 'oldest_first'],
-              ['Alfabético A-Z', 'alphabetical_asc'],
-              ['Alfabético Z-A', 'alphabetical_desc']
+              [t('notes.sorting.newest_first'), 'newest_first'],
+              [t('notes.sorting.oldest_first'), 'oldest_first'],
+              [t('notes.sorting.alphabetical_asc'), 'alphabetical_asc'],
+              [t('notes.sorting.alphabetical_desc'), 'alphabetical_desc']
             ], selected: params[:order]), { class: 'browser-default', name: "order" } %>
             
           </div>
-          <div class="col s2">
-            <%= f.submit 'Aplicar', class: 'btn red' %>
+          <div class="col s4 m2">
+            <%= f.submit t('notes.sorting.submit'), class: 'btn red', style: "width: 100%" %>
           </div>
         </div>
       

@@ -43,6 +43,13 @@ en:
     updated: "Note was successfully updated."
     deleted: "Note was successfully destroyed."
     comfirm: "Are you sure?"
+    sorting:
+      label: "Sort by:"
+      newest_first: "Newest first"
+      oldest_first: "Oldest first"
+      alphabetical_asc: "A-Z"
+      alphabetical_desc: "Z-A"
+      submit: "Apply"
   
   forms:
     notes:

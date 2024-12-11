@@ -82,7 +82,7 @@ header, footer {
 
 .select-dropdown select{
     display: block;
-    width: 100%; /* Asegura que el select ocupe todo el espacio disponible */
+    width: 100%;
     padding: 10px;
     font-size: 16px;
     border-radius: 4px;
@@ -92,6 +92,18 @@ header, footer {
 
 .not-margin-bottom{
     margin-bottom: 0px;
+}
+
+.error-title-note{
+    font-weight: 500;
+}
+
+.sidenav-overlay{
+    z-index: 996 !important;
+}
+
+.brand-logo {
+    white-space: nowrap;
 }
   
 
