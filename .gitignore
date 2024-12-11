@@ -71,8 +71,6 @@ build-iPhoneSimulator/
 .env
 .env.local
 .env.example
-config/database.yml
-config/secrets.yml
 
 # Archivos de compilación de assets
 /public/assets/
