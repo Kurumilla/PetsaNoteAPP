@@ -9,13 +9,15 @@ Sigue estos pasos para instalar y configurar el proyecto en tu máquina local:
 ### Comando:
 
 1. **Clonar el repositorio**:
-   - `git clone` descarga el proyecto a tu máquina local.
+   - `git clone` 
    
 2. **Instalar dependencias de Ruby**:
-   - `bundle install` instala todas las gemas necesarias, como Rails y otras dependencias.
+   - `bundle install` 
 
 3. **Instalar dependencias de Node.js**:
-   - `yarn install` instala las dependencias de frontend (por ejemplo, las dependencias de JavaScript si estás usando Webpacker).
+   - `yarn install` 
+     o
+   - `npm install` 
 
 4. **Configurar la base de datos**:
    - `rails db:create` crea la base de datos.
