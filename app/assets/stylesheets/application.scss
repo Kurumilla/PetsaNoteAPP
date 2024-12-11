@@ -80,3 +80,18 @@ header, footer {
     margin-right: 10px;
 }
 
+.select-dropdown select{
+    display: block;
+    width: 100%; /* Asegura que el select ocupe todo el espacio disponible */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: white;
+  }
+
+.not-margin-bottom{
+    margin-bottom: 0px;
+}
+  
+

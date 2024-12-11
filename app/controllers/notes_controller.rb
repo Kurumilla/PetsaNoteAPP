@@ -2,14 +2,29 @@ class NotesController < ApplicationController
   before_action :set_note, only: %i[ show edit update destroy ]
 
   def index
-    @notes = Note.order(created_at: :desc)
-  
+    @notes = Note.all
+    
+    case params[:order]
+    when 'newest_first'
+      @notes = @notes.order(created_at: :desc)
+    when 'oldest_first'
+      @notes = @notes.order(created_at: :asc)
+    when 'alphabetical_asc'
+      @notes = @notes.order(:title)
+    when 'alphabetical_desc'
+      @notes = @notes.order(title: :desc)
+    else
+      @notes = @notes.order(created_at: :desc)
+    end
+    
     if params[:query].present?
-      @notes = Note.search_by_query(params[:query])
+      @notes = @notes.search_by_query(params[:query])
     end
   
     @grouped_notes = @notes.group_by { |note| note.created_at.strftime('%B %Y') }
   end
+  
+  
 
   def show
   end

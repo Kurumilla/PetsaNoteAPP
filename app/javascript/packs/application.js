@@ -12,6 +12,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 import './tooltips';
+import './order';
 
 Rails.start()
 Turbolinks.start()
@@ -48,4 +49,6 @@ document.addEventListener('turbolinks:load', function () {
   if (savedLocale) {
     document.documentElement.lang = savedLocale;
   }
+
+  
 })
