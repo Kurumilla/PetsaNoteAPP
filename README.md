@@ -14,7 +14,7 @@ Sigue estos pasos para instalar y configurar el proyecto en tu máquina local:
 2. **Instalar dependencias de Ruby**:
    - `bundle install` 
 
-3. **Instalar dependencias de Node.js**:
+3. **Instalar dependencias de Node.js (16.x.x)**:
    - `yarn install` o `npm install` 
 
 4. **Configurar la base de datos**:
@@ -24,3 +24,13 @@ Sigue estos pasos para instalar y configurar el proyecto en tu máquina local:
 
 5. **Iniciar el servidor Rails**:
    - `rails server` inicia el servidor local para que puedas ver la aplicación en tu navegador.
+
+
+### Docker:
+
+1. **Iniciar docker**:
+   - Una vez clonado el repositorio perfectamente es posible iniciarlo con docker (es necesario tenerlo ya instalado)
+   - `docker compose up --build`
+
+1. **Ingresarr**:
+   - `http://localhost:3000` podras ver la aplicacion en tu navegador.

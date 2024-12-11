@@ -1,19 +1,29 @@
 FROM ruby:3.0.1-buster
 
+RUN apt-get update -y && apt-get install -y \
+    curl \
+    build-essential \
+    libpq-dev \
+    npm
+
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs
+
+RUN node -v
+RUN npm -v
+
+RUN npm install -g yarn
+
 WORKDIR /app
-
-RUN curl -sL https://deb.nodesource.com/setup_8.x | sh -
-
-RUN apt-get update -y && apt-get install -y npm
-
-RUN npm install --global yarn
 
 COPY Gemfile* ./
 
+RUN gem install bundler
 RUN bundle install
 
 COPY . .
 
-RUN rails webpacker:install
+RUN yarn install
 
-CMD ["rails", "db:setup"]
+CMD ["sh", "-c", "rails db:create db:migrate db:seed && rails server -b 0.0.0.0"]
+# CMD ["rails", "db:setup"]
