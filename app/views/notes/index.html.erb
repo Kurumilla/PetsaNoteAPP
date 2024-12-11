@@ -1,0 +1,66 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="row not-margin-bottom">
+    <div class="col s12">
+        <div class="row valign-wrapper not-margin-bottom">
+          <div class="col s4 m2 center-align">
+            <span class="order-text"> <%= t('notes.sorting.label') %></span>
+          </div>
+          <div class="col s4 m8">
+            <%= form_with url: notes_path, method: :get, html: { class: 'input-field select-dropdown game', id: 'orderForm' } do |f| %> 
+            <%= f.select :order, options_for_select([
+              [t('notes.sorting.newest_first'), 'newest_first'],
+              [t('notes.sorting.oldest_first'), 'oldest_first'],
+              [t('notes.sorting.alphabetical_asc'), 'alphabetical_asc'],
+              [t('notes.sorting.alphabetical_desc'), 'alphabetical_desc']
+            ], selected: params[:order]), { class: 'browser-default', name: "order" } %>
+            
+          </div>
+          <div class="col s4 m2">
+            <%= f.submit t('notes.sorting.submit'), class: 'btn red', style: "width: 100%" %>
+          </div>
+        </div>
+      
+      <% end %>
+    </div>
+  </div>
+
+   <%= form_with url: notes_path, html: { class: 'input-field col s12' }, method: 'get' do |f| %>
+    <%= material_icon.search.css_class('prefix') %>
+    <%= f.text_field :query, autofocus: true, placeholder: t('search_placeholder'), value: params.dig(:filters, :query), class: "validate" %>
+  <% end %>
+
+
+  <% @grouped_notes.each do |month, notes| %>
+    <div class="month-section">
+      <!-- Encabezado del mes -->
+      <div class="col s12 section">
+        <h4 class="center-align">- <%= month %> -</h4>
+      </div>
+      
+      <% notes.each do |note| %>
+        <%= link_to note_path(note) do %>
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-content black-text">
+                <span class="card-title">
+                  <%= note.title %>
+                  <span class="right" style="font-size: 50%">
+                    <%= format_as_localtime note.created_at %>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<div class="fixed-action-btn">
+  <%= link_to new_note_path, title: t('new_note'), class: 'btn-floating btn-large pulse tooltipped', data: { tooltip: t('new_note'), position: "left" } do %>
+    <%= material_icon.add %>
+  <% end %>
+</div>

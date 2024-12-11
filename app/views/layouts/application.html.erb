@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+  window.translations = {
+    dark_mode: "<%= j t('dark_mode') %>",
+    light_mode: "<%= j t('light_mode') %>",
+  };
+</script>
+<html>
+  <head>
+    <title>My note collection</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <%= link_to notes_path, class: 'brand-logo center' do %>
+          <%= t('title') %>
+        <% end %>
+        <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><%= link_to "ES", set_language_path('es'), class: '' %></li>
+          <li><%= link_to "EN", set_language_path('en'), class: '' %></li>
+          <li><a id="theme-toggle" href="#" class=""><%= t('dark_mode') %></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><%= link_to "ES", set_language_path('es'), class: '' %></li>
+      <li><%= link_to "EN", set_language_path('en'), class: '' %></li>
+      <li><a id="theme-toggle" href="#" class=""><%= t('dark_mode') %></a></li>
+    </ul>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
