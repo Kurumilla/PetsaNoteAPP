@@ -28471,3 +28471,1034 @@ Processing by NotesController#index as HTML
 Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 6844)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/git/PetsaNoteAPP/config/environment.rb:5)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Nihil excepturi nesciunt."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.8ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Nihil excepturi nesciunt."], ["body", "Hic nesciunt quis. Et modi corporis. Consequatur labore sed. Enim qui doloribus. Aut sit corporis."], ["created_at", "2024-06-01 03:38:15.710668"], ["updated_at", "2024-12-11 04:52:51.320528"]]
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quidem sed quae."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quidem sed quae."], ["body", "Vero labore temporibus. Id sit aut. Quibusdam qui architecto. Expedita dolores qui. Non et iure."], ["created_at", "2023-12-15 14:18:33.331031"], ["updated_at", "2024-12-11 04:52:51.341998"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Molestiae laboriosam libero."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Molestiae laboriosam libero."], ["body", "Illum velit sit. Id consequuntur tempore. Sunt vitae eos. Consequatur nesciunt voluptatem. Doloribus voluptas aut."], ["created_at", "2024-05-13 12:53:06.966460"], ["updated_at", "2024-12-11 04:52:51.352806"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Consectetur et dolores."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Consectetur et dolores."], ["body", "Aut esse minus. Odit et cumque. Enim sit voluptatem. Beatae quis aut. Odio veniam tenetur."], ["created_at", "2024-01-13 14:24:56.625940"], ["updated_at", "2024-12-11 04:52:51.363676"]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Sint reprehenderit quam."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Sint reprehenderit quam."], ["body", "Neque necessitatibus ut. Ut quia autem. Veritatis eum sed. Sapiente fugit qui. Autem magni reprehenderit."], ["created_at", "2024-01-22 14:11:59.237343"], ["updated_at", "2024-12-11 04:52:51.374945"]]
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Voluptatem deserunt sit."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Voluptatem deserunt sit."], ["body", "Aut incidunt repellendus. Quo harum consequatur. Repudiandae molestiae reiciendis. Et molestiae earum. Pariatur aut incidunt."], ["created_at", "2024-12-10 17:25:53.816270"], ["updated_at", "2024-12-11 04:52:51.390307"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Excepturi unde qui."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Excepturi unde qui."], ["body", "Natus et et. Ab nulla est. Et fugit iure. Itaque repellendus aut. Quo quia qui."], ["created_at", "2024-03-02 01:38:16.299522"], ["updated_at", "2024-12-11 04:52:51.401100"]]
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Illo sint labore."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Illo sint labore."], ["body", "Possimus est sunt. Ab libero sed. Est cumque dolores. Sit autem sint. Corrupti modi temporibus."], ["created_at", "2024-01-13 22:08:52.105830"], ["updated_at", "2024-12-11 04:52:51.412250"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Aliquid eum maxime."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aliquid eum maxime."], ["body", "Suscipit adipisci in. Nesciunt deserunt voluptas. Asperiores voluptatem natus. Nam aliquid sunt. Dignissimos numquam totam."], ["created_at", "2024-03-04 01:21:04.941681"], ["updated_at", "2024-12-11 04:52:51.422935"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Dolorem et quis."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Dolorem et quis."], ["body", "Quibusdam dolorem est. Aut amet sed. Est reprehenderit ut. Nihil sint consectetur. Nostrum est rerum."], ["created_at", "2024-11-24 01:09:09.758663"], ["updated_at", "2024-12-11 04:52:51.433500"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Voluptas et odit."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Voluptas et odit."], ["body", "Eius voluptates impedit. Provident placeat omnis. Ea earum quisquam. Dolorem corporis consequuntur. Hic optio amet."], ["created_at", "2024-02-09 18:02:19.437481"], ["updated_at", "2024-12-11 04:52:51.445324"]]
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Tenetur quibusdam quod."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Tenetur quibusdam quod."], ["body", "Voluptatibus aspernatur architecto. Consequatur voluptas dolore. Eveniet aut ut. At ab aut. Eaque in corporis."], ["created_at", "2024-01-31 16:22:32.825255"], ["updated_at", "2024-12-11 04:52:51.458633"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Autem est sit."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Autem est sit."], ["body", "Aut commodi vel. Voluptatibus sunt quia. Ab error rerum. Dolorum ipsa quae. Voluptatem dolore dolorem."], ["created_at", "2024-08-25 14:36:24.543411"], ["updated_at", "2024-12-11 04:52:51.469593"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Debitis est optio."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Debitis est optio."], ["body", "Consequatur velit non. Ut reprehenderit repudiandae. Est dolore qui. Numquam placeat repellendus. Dignissimos autem labore."], ["created_at", "2024-09-30 00:10:47.231340"], ["updated_at", "2024-12-11 04:52:51.480310"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Consequatur quis aspernatur."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Consequatur quis aspernatur."], ["body", "Totam fuga facilis. Odit quae dolorem. Inventore nulla nam. Debitis alias eum. Id et ut."], ["created_at", "2024-11-29 14:26:14.828830"], ["updated_at", "2024-12-11 04:52:51.491359"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quidem et non."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quidem et non."], ["body", "Aut maxime rem. Quas sint nam. Sed cum tenetur. Natus repellendus voluptatem. Dolorem ea at."], ["created_at", "2024-11-14 16:40:04.944782"], ["updated_at", "2024-12-11 04:52:51.501977"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quia corporis sit."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quia corporis sit."], ["body", "Odio nemo sit. Hic blanditiis aut. Est corrupti neque. Adipisci aut eius. Ut eveniet at."], ["created_at", "2024-09-18 04:16:16.867846"], ["updated_at", "2024-12-11 04:52:51.512630"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Blanditiis minus dicta."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Blanditiis minus dicta."], ["body", "Voluptatum maxime eos. Enim similique corrupti. Magnam autem qui. Autem quia quo. Provident similique ab."], ["created_at", "2024-01-21 09:41:45.755332"], ["updated_at", "2024-12-11 04:52:51.523209"]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ipsam nemo dolorem."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ipsam nemo dolorem."], ["body", "Et nulla porro. Perferendis ipsam voluptatem. Accusamus sunt similique. Est voluptas dolorem. Magni et molestias."], ["created_at", "2024-12-01 10:46:26.835993"], ["updated_at", "2024-12-11 04:52:51.537183"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Maxime deleniti tempora."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Maxime deleniti tempora."], ["body", "Ab labore a. Quibusdam commodi delectus. Ipsum impedit minima. Illum autem recusandae. Praesentium assumenda est."], ["created_at", "2024-01-28 09:28:29.976719"], ["updated_at", "2024-12-11 04:52:51.547600"]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Dolor esse velit."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Dolor esse velit."], ["body", "Molestiae perferendis et. Veritatis et aut. Nulla rem qui. Id occaecati sit. Tempora deleniti quisquam."], ["created_at", "2024-03-09 05:56:05.518320"], ["updated_at", "2024-12-11 04:52:51.559059"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Sequi dolor officiis."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Sequi dolor officiis."], ["body", "Perspiciatis quidem aliquam. Sit et esse. Dolores perspiciatis ad. Sapiente fugiat nihil. Ab dolorum qui."], ["created_at", "2023-12-23 13:43:26.017154"], ["updated_at", "2024-12-11 04:52:51.568432"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Doloremque ut debitis."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Doloremque ut debitis."], ["body", "Quo officia fugiat. Quia adipisci veritatis. Sint fuga sint. Sint doloribus recusandae. Et maiores vitae."], ["created_at", "2024-10-03 14:22:40.166202"], ["updated_at", "2024-12-11 04:52:51.577372"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Sit quia molestiae."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Sit quia molestiae."], ["body", "Deleniti ea vitae. Occaecati velit sequi. Ipsam praesentium est. At qui sint. Consectetur autem fugiat."], ["created_at", "2024-01-07 16:35:33.909105"], ["updated_at", "2024-12-11 04:52:51.586288"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Corrupti et est."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Corrupti et est."], ["body", "Fugit similique sunt. Odit quas aut. Harum impedit aut. Quia alias expedita. Eius eum blanditiis."], ["created_at", "2024-09-22 23:03:06.303296"], ["updated_at", "2024-12-11 04:52:51.595475"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Illum optio et."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Illum optio et."], ["body", "Nesciunt aperiam optio. Error aut consequuntur. Et quibusdam nobis. Est doloremque eum. Harum consequatur qui."], ["created_at", "2024-08-25 14:24:37.190717"], ["updated_at", "2024-12-11 04:52:51.605110"]]
+  [1m[36mTRANSACTION (10.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Iusto earum praesentium."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Iusto earum praesentium."], ["body", "Saepe voluptatem id. Fugiat corrupti exercitationem. Ducimus ut deserunt. Error qui sed. Ab labore itaque."], ["created_at", "2024-10-06 23:15:12.482699"], ["updated_at", "2024-12-11 04:52:51.619544"]]
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quaerat corrupti non."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quaerat corrupti non."], ["body", "Itaque non aliquam. Dolores quo autem. Rerum voluptas laboriosam. Deleniti in nostrum. Repellat libero enim."], ["created_at", "2024-10-10 16:12:10.243529"], ["updated_at", "2024-12-11 04:52:51.629921"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Et et et."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Et et et."], ["body", "Aut sed corporis. Qui vel reprehenderit. Autem atque qui. Libero dolor eos. Qui rerum repudiandae."], ["created_at", "2024-10-17 07:37:19.220386"], ["updated_at", "2024-12-11 04:52:51.639175"]]
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Rerum ut exercitationem."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Rerum ut exercitationem."], ["body", "Inventore tempore quis. Error vel natus. Impedit quia perferendis. Harum alias et. Praesentium cum aperiam."], ["created_at", "2024-02-12 22:35:59.784952"], ["updated_at", "2024-12-11 04:52:51.649349"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Et modi sed."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Et modi sed."], ["body", "Vero maxime nulla. Eaque ut soluta. Impedit expedita quidem. Qui nesciunt ut. Culpa enim qui."], ["created_at", "2024-05-27 08:40:43.259357"], ["updated_at", "2024-12-11 04:52:51.658720"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ab eum accusantium."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ab eum accusantium."], ["body", "Optio sapiente recusandae. Nisi blanditiis perspiciatis. Ea quia ut. Vero et id. Nisi omnis perferendis."], ["created_at", "2024-05-31 22:10:03.762305"], ["updated_at", "2024-12-11 04:52:51.668180"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Et ad voluptatibus."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Et ad voluptatibus."], ["body", "Quia dolores fugiat. Ea nihil et. Vel dolor eum. Est corrupti fugiat. Enim sunt perferendis."], ["created_at", "2024-05-26 22:49:13.232112"], ["updated_at", "2024-12-11 04:52:51.677315"]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Necessitatibus et esse."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Necessitatibus et esse."], ["body", "Eligendi minima laborum. Et quia voluptas. Velit nisi iste. Placeat illo velit. Dolores veritatis aut."], ["created_at", "2024-04-08 15:04:49.476986"], ["updated_at", "2024-12-11 04:52:51.690425"]]
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Deserunt non sed."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Deserunt non sed."], ["body", "Ratione sed nulla. Et nulla nam. Quos nemo similique. Ducimus illo atque. Qui veniam consequatur."], ["created_at", "2024-07-19 13:06:31.849248"], ["updated_at", "2024-12-11 04:52:51.700675"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Accusamus quod eveniet."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Accusamus quod eveniet."], ["body", "Laboriosam aperiam quae. Sapiente nulla qui. Laboriosam blanditiis omnis. Enim et aliquam. Perferendis ut quia."], ["created_at", "2023-12-22 10:18:49.767521"], ["updated_at", "2024-12-11 04:52:51.711050"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ut veritatis atque."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ut veritatis atque."], ["body", "Excepturi delectus eum. Maiores provident sed. Non enim sequi. Voluptatum totam atque. Voluptas tempore aut."], ["created_at", "2024-10-05 13:38:55.779009"], ["updated_at", "2024-12-11 04:52:51.721580"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quidem ratione at."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quidem ratione at."], ["body", "Suscipit quaerat sed. Occaecati quod voluptatem. Dolor non corporis. Ratione natus consectetur. Iusto temporibus nemo."], ["created_at", "2024-07-05 23:56:25.444689"], ["updated_at", "2024-12-11 04:52:51.732677"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Eaque dignissimos dolor."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Eaque dignissimos dolor."], ["body", "Ipsum deleniti dolorem. Ut nemo et. Non expedita maiores. Voluptas aut soluta. Qui omnis illo."], ["created_at", "2024-02-27 09:05:24.690218"], ["updated_at", "2024-12-11 04:52:51.743759"]]
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Aut nobis perferendis."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aut nobis perferendis."], ["body", "Magnam minus adipisci. Consequatur quaerat voluptas. Praesentium facere voluptatem. Praesentium sint quisquam. Est natus autem."], ["created_at", "2024-02-09 17:21:25.452065"], ["updated_at", "2024-12-11 04:52:51.757666"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Molestiae et expedita."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Molestiae et expedita."], ["body", "Nesciunt aliquid non. Aut sint aperiam. Quisquam est consequatur. Animi nihil odio. Ut et temporibus."], ["created_at", "2024-05-08 12:06:42.542916"], ["updated_at", "2024-12-11 04:52:51.768187"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Amet cupiditate illo."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Amet cupiditate illo."], ["body", "Voluptate tempore sed. Debitis aut aliquid. Expedita sit amet. Iure nemo et. Voluptatem dolores aut."], ["created_at", "2024-04-16 14:19:30.311274"], ["updated_at", "2024-12-11 04:52:51.778520"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Sit saepe incidunt."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Sit saepe incidunt."], ["body", "Et quos magnam. Quos eos molestias. Voluptatem nam dolorum. Sunt qui et. Incidunt quasi ratione."], ["created_at", "2023-12-25 13:50:46.076680"], ["updated_at", "2024-12-11 04:52:51.789409"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Eos facere eligendi."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Eos facere eligendi."], ["body", "Qui odit et. Asperiores tenetur porro. Pariatur sit sint. Quia perspiciatis quis. Sed est consequatur."], ["created_at", "2024-07-20 17:49:01.408955"], ["updated_at", "2024-12-11 04:52:51.799901"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Aspernatur numquam quaerat."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aspernatur numquam quaerat."], ["body", "Recusandae est repellendus. Fugiat ea maiores. Optio velit velit. Rerum nisi animi. Enim autem quo."], ["created_at", "2024-05-08 00:41:16.670651"], ["updated_at", "2024-12-11 04:52:51.810772"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Expedita ad at."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Expedita ad at."], ["body", "Incidunt corporis aut. Velit accusantium commodi. Rerum distinctio sit. Ea et similique. Minima hic molestias."], ["created_at", "2024-07-19 09:21:56.745997"], ["updated_at", "2024-12-11 04:52:51.823586"]]
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Sit quia aut."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Sit quia aut."], ["body", "Nesciunt ut sed. Tempora voluptatum est. Culpa dolor sapiente. Quod architecto tempora. Quia nostrum in."], ["created_at", "2024-08-12 14:02:11.910700"], ["updated_at", "2024-12-11 04:52:51.836894"]]
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Qui fuga consequatur."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Qui fuga consequatur."], ["body", "Quisquam labore voluptates. Qui officiis error. Consequatur reiciendis qui. Perferendis enim ut. Quo eaque et."], ["created_at", "2024-09-25 10:11:01.870027"], ["updated_at", "2024-12-11 04:52:51.848445"]]
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Numquam sit expedita."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Numquam sit expedita."], ["body", "Officiis neque ullam. Repellat voluptas placeat. Incidunt tempore adipisci. Impedit officiis et. Asperiores atque quidem."], ["created_at", "2024-10-17 21:28:09.142559"], ["updated_at", "2024-12-11 04:52:51.859657"]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Eligendi itaque ex."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Eligendi itaque ex."], ["body", "Est aspernatur magnam. Velit nemo in. Tenetur nisi non. Et voluptas sint. Incidunt assumenda qui."], ["created_at", "2024-02-12 11:52:46.886296"], ["updated_at", "2024-12-11 04:52:51.872552"]]
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Deleniti voluptas suscipit."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Deleniti voluptas suscipit."], ["body", "Natus sed voluptates. Perferendis praesentium nesciunt. Iste aliquid quos. Culpa cupiditate ut. Eius dolorem perferendis."], ["created_at", "2024-10-18 02:21:43.044530"], ["updated_at", "2024-12-11 04:52:51.883326"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Perspiciatis deleniti pariatur."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Perspiciatis deleniti pariatur."], ["body", "Iste rerum voluptatum. Aut est ut. Vel illum dolorem. Architecto consectetur neque. Molestias totam qui."], ["created_at", "2024-04-17 02:03:51.772005"], ["updated_at", "2024-12-11 04:52:51.893793"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Aspernatur temporibus tenetur."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aspernatur temporibus tenetur."], ["body", "Voluptatem placeat quisquam. A ut nemo. Beatae repudiandae repellat. Esse a velit. Vitae amet dolorem."], ["created_at", "2024-10-11 08:18:27.713763"], ["updated_at", "2024-12-11 04:52:51.904593"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Omnis asperiores quibusdam."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Omnis asperiores quibusdam."], ["body", "Expedita sit harum. Et quis qui. Aperiam ut soluta. Porro unde et. Adipisci quaerat cumque."], ["created_at", "2024-01-05 14:26:16.869732"], ["updated_at", "2024-12-11 04:52:51.915343"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Omnis eaque alias."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Omnis eaque alias."], ["body", "Repudiandae modi libero. Eum sapiente natus. Facere et iste. Eveniet id unde. Id eveniet facere."], ["created_at", "2024-10-18 15:47:11.930162"], ["updated_at", "2024-12-11 04:52:51.925916"]]
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Aspernatur error architecto."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aspernatur error architecto."], ["body", "Et commodi voluptatum. Magnam eos omnis. Quas ut soluta. Qui eos saepe. Quaerat voluptate maiores."], ["created_at", "2024-05-29 03:02:20.125582"], ["updated_at", "2024-12-11 04:52:51.941413"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Velit et praesentium."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Velit et praesentium."], ["body", "Architecto iusto quis. Et cum placeat. Illo autem eum. Repellendus non corporis. Quas error temporibus."], ["created_at", "2024-06-06 20:57:08.198091"], ["updated_at", "2024-12-11 04:52:51.951922"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Et aperiam voluptatem."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Et aperiam voluptatem."], ["body", "Quibusdam quo magni. Error ullam occaecati. Alias autem repudiandae. Esse laborum officia. Ipsum odit aut."], ["created_at", "2024-05-08 01:30:06.743922"], ["updated_at", "2024-12-11 04:52:51.963009"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Perspiciatis cupiditate est."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Perspiciatis cupiditate est."], ["body", "Qui natus id. Esse vel omnis. Doloremque incidunt id. Et perspiciatis corrupti. Consequuntur nostrum qui."], ["created_at", "2023-12-14 19:54:06.773748"], ["updated_at", "2024-12-11 04:52:51.973187"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quod temporibus error."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quod temporibus error."], ["body", "Modi sint aut. Est quia veniam. Cum aliquam qui. Nobis laboriosam qui. Veniam voluptas autem."], ["created_at", "2024-02-25 21:50:47.036211"], ["updated_at", "2024-12-11 04:52:51.984565"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Tempore nihil aspernatur."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Tempore nihil aspernatur."], ["body", "Dolor sed qui. Optio numquam omnis. Nisi nostrum repudiandae. Nam ratione libero. Voluptate rerum delectus."], ["created_at", "2024-03-31 18:43:23.178049"], ["updated_at", "2024-12-11 04:52:51.993742"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quo debitis et."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quo debitis et."], ["body", "Molestias sunt illo. Possimus totam excepturi. Est beatae non. Amet dolorum voluptas. Perferendis beatae cupiditate."], ["created_at", "2024-06-06 03:26:13.396846"], ["updated_at", "2024-12-11 04:52:52.003167"]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ipsa consequatur quas."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ipsa consequatur quas."], ["body", "Exercitationem sint tempora. Iure aliquid tempora. Omnis sapiente consequatur. Vel eum eum. Eius voluptas ab."], ["created_at", "2024-04-16 23:16:20.995723"], ["updated_at", "2024-12-11 04:52:52.017917"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Itaque recusandae ipsam."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Itaque recusandae ipsam."], ["body", "Error et aut. Aperiam ut aut. Excepturi cumque minima. Aut autem velit. Dicta est et."], ["created_at", "2024-12-07 06:30:38.269681"], ["updated_at", "2024-12-11 04:52:52.027327"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Et asperiores tenetur."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Et asperiores tenetur."], ["body", "Tempora facilis non. Dolores natus illo. Eos nihil optio. Voluptas fuga id. Omnis quidem mollitia."], ["created_at", "2024-09-19 07:28:48.339312"], ["updated_at", "2024-12-11 04:52:52.037029"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Tempore ex non."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Tempore ex non."], ["body", "Qui pariatur illum. Sed sunt quo. Consequatur voluptatem cum. Dolor quis omnis. Neque in nam."], ["created_at", "2024-10-29 17:42:25.209904"], ["updated_at", "2024-12-11 04:52:52.046047"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Esse minima perferendis."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Esse minima perferendis."], ["body", "Nam dolorem qui. Fugiat atque enim. Dolor tempore quia. Qui occaecati omnis. Eaque eum suscipit."], ["created_at", "2024-03-18 03:49:10.464121"], ["updated_at", "2024-12-11 04:52:52.054571"]]
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Id voluptates cumque."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Id voluptates cumque."], ["body", "Quaerat sunt repellat. Nostrum ut tempore. Omnis autem veniam. Officiis sit quas. Ut eos labore."], ["created_at", "2024-12-02 18:24:44.644010"], ["updated_at", "2024-12-11 04:52:52.065317"]]
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Debitis doloribus culpa."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Debitis doloribus culpa."], ["body", "Magni optio ut. Porro cupiditate occaecati. Aut repudiandae libero. Eligendi laboriosam eaque. Soluta delectus ipsum."], ["created_at", "2024-07-14 19:05:09.221479"], ["updated_at", "2024-12-11 04:52:52.077641"]]
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Eum quisquam officiis."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Eum quisquam officiis."], ["body", "Consectetur repellat tempora. Assumenda voluptatibus impedit. Sequi laudantium blanditiis. Repellendus magni corporis. Earum voluptas rerum."], ["created_at", "2024-01-15 03:54:38.695839"], ["updated_at", "2024-12-11 04:52:52.103299"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Necessitatibus culpa quis."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Necessitatibus culpa quis."], ["body", "Quidem dolores impedit. Voluptas quod a. Eos atque ut. Repellat vel totam. Eos dicta rerum."], ["created_at", "2024-05-24 21:50:10.498749"], ["updated_at", "2024-12-11 04:52:52.115729"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Dolore asperiores qui."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Dolore asperiores qui."], ["body", "Nostrum officia id. Et ducimus reprehenderit. Molestias reprehenderit qui. Ullam voluptatem esse. Doloremque sunt non."], ["created_at", "2024-03-16 02:05:45.560015"], ["updated_at", "2024-12-11 04:52:52.126931"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Officiis fuga corporis."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Officiis fuga corporis."], ["body", "Quia minus debitis. Laborum itaque quia. Itaque debitis excepturi. Rerum alias in. Autem nesciunt distinctio."], ["created_at", "2024-07-24 00:00:09.436252"], ["updated_at", "2024-12-11 04:52:52.138322"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Suscipit neque a."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Suscipit neque a."], ["body", "Aut voluptatum accusamus. Consequatur sint ut. Et dolorem vitae. Debitis nemo ea. Dignissimos ut ea."], ["created_at", "2023-12-23 15:18:01.200832"], ["updated_at", "2024-12-11 04:52:52.149349"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Non sit ut."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Non sit ut."], ["body", "Sit porro voluptatum. Id dignissimos consequuntur. Laudantium inventore sunt. Aut et voluptas. Qui dolor aliquam."], ["created_at", "2024-03-02 21:57:28.185680"], ["updated_at", "2024-12-11 04:52:52.160410"]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Maxime occaecati labore."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Maxime occaecati labore."], ["body", "Explicabo maiores magnam. Et consectetur molestias. Tempora deleniti laborum. Et aut vel. Dolores dignissimos ducimus."], ["created_at", "2024-02-26 21:56:31.632990"], ["updated_at", "2024-12-11 04:52:52.171903"]]
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Eos et totam."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Eos et totam."], ["body", "A aut sit. Nihil enim quidem. Nulla dicta et. Dolorum earum omnis. Vitae repellat quo."], ["created_at", "2024-07-10 20:07:40.820748"], ["updated_at", "2024-12-11 04:52:52.194641"]]
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Sed quae nemo."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Sed quae nemo."], ["body", "Voluptatem nihil eligendi. Molestiae omnis id. Reiciendis et sed. Suscipit dolorum nisi. Ut et voluptatibus."], ["created_at", "2024-11-04 12:21:18.999593"], ["updated_at", "2024-12-11 04:52:52.206487"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Sapiente hic maxime."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Sapiente hic maxime."], ["body", "Aliquam sit nesciunt. Est velit quia. Blanditiis quo qui. Neque sit aliquid. Ipsum ipsa tempore."], ["created_at", "2024-01-03 07:57:30.780955"], ["updated_at", "2024-12-11 04:52:52.217690"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Minima est ut."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Minima est ut."], ["body", "Quasi pariatur qui. Est est magnam. Corporis officiis ab. Ab facilis eligendi. Corrupti et cum."], ["created_at", "2024-11-02 04:02:40.674385"], ["updated_at", "2024-12-11 04:52:52.228114"]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Perferendis necessitatibus consequatur."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Perferendis necessitatibus consequatur."], ["body", "Rerum nulla maxime. Laborum accusamus voluptates. Hic corporis harum. Nulla nesciunt repellendus. Doloremque tempore quia."], ["created_at", "2024-02-25 22:56:05.580472"], ["updated_at", "2024-12-11 04:52:52.238898"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Architecto et saepe."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Architecto et saepe."], ["body", "Et quos impedit. Aut blanditiis sed. Perspiciatis deleniti in. Autem molestiae sapiente. Aut sit aut."], ["created_at", "2024-01-30 08:20:16.292844"], ["updated_at", "2024-12-11 04:52:52.249453"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Molestias possimus exercitationem."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Molestias possimus exercitationem."], ["body", "Eum accusantium perferendis. Quisquam quis aut. Sapiente similique sequi. Ea id praesentium. Rerum occaecati ut."], ["created_at", "2024-03-15 03:48:13.763348"], ["updated_at", "2024-12-11 04:52:52.260124"]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quam aut fuga."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quam aut fuga."], ["body", "Porro harum molestias. Aliquam iusto quidem. Sit et aliquid. Iure omnis enim. Deleniti aut dicta."], ["created_at", "2024-10-07 19:27:56.928460"], ["updated_at", "2024-12-11 04:52:52.274453"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Architecto fugiat facere."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Architecto fugiat facere."], ["body", "At sed voluptatibus. Voluptate dolorem omnis. Optio sit qui. Nemo in est. Aperiam est voluptatibus."], ["created_at", "2024-12-07 07:45:48.794281"], ["updated_at", "2024-12-11 04:52:52.285205"]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Reprehenderit totam perferendis."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Reprehenderit totam perferendis."], ["body", "Sint voluptate molestias. Pariatur quo dolorem. Et facere architecto. Quia nulla dicta. Natus officiis eaque."], ["created_at", "2024-03-28 21:01:04.193544"], ["updated_at", "2024-12-11 04:52:52.295963"]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Sequi officiis voluptatem."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Sequi officiis voluptatem."], ["body", "Totam aliquam est. Quaerat commodi omnis. Ex distinctio sequi. Numquam ut non. Et aut corporis."], ["created_at", "2024-06-22 21:35:06.565798"], ["updated_at", "2024-12-11 04:52:52.307631"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Illo rerum deserunt."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Illo rerum deserunt."], ["body", "Fugiat doloremque et. Placeat quidem corporis. Et quaerat omnis. Suscipit libero et. Soluta minima fuga."], ["created_at", "2024-03-17 23:45:40.617253"], ["updated_at", "2024-12-11 04:52:52.318635"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Magnam sit qui."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Magnam sit qui."], ["body", "Perferendis ad exercitationem. Hic doloribus reiciendis. Molestiae fugiat dolorem. Et blanditiis doloremque. Autem ab enim."], ["created_at", "2024-10-03 09:35:32.124334"], ["updated_at", "2024-12-11 04:52:52.327825"]]
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Et qui reprehenderit."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Et qui reprehenderit."], ["body", "Dolores excepturi qui. Dolore dolor ipsam. Quam molestiae quidem. Perspiciatis repellendus ea. Unde illo iure."], ["created_at", "2024-03-16 03:08:00.241577"], ["updated_at", "2024-12-11 04:52:52.341324"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Reiciendis et sed."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Reiciendis et sed."], ["body", "Ex illo voluptate. Quos officiis autem. Enim rerum autem. Debitis qui excepturi. Facilis et et."], ["created_at", "2024-11-15 14:58:32.768106"], ["updated_at", "2024-12-11 04:52:52.350900"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ex omnis nesciunt."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ex omnis nesciunt."], ["body", "Ipsa voluptates facere. Totam natus dolores. Quia nobis animi. Enim amet quidem. Earum veritatis iste."], ["created_at", "2024-11-09 16:09:19.584160"], ["updated_at", "2024-12-11 04:52:52.359841"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Harum voluptas ut."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Harum voluptas ut."], ["body", "Voluptates necessitatibus exercitationem. Quisquam repellendus rem. Dolores ut sapiente. Qui voluptas illo. Sunt qui deleniti."], ["created_at", "2024-02-13 00:49:31.039615"], ["updated_at", "2024-12-11 04:52:52.369567"]]
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Laborum error tempore."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Laborum error tempore."], ["body", "Ut sapiente error. Commodi dolore iure. Impedit voluptate recusandae. Consequatur porro eveniet. Est perferendis aspernatur."], ["created_at", "2024-02-06 02:37:34.909073"], ["updated_at", "2024-12-11 04:52:52.381067"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Culpa ab temporibus."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Culpa ab temporibus."], ["body", "Incidunt illo placeat. Explicabo neque delectus. Doloribus vel et. Ab corrupti qui. Est dolorem quidem."], ["created_at", "2024-10-03 18:42:04.109239"], ["updated_at", "2024-12-11 04:52:52.390442"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ea vel ipsum."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ea vel ipsum."], ["body", "Consequatur dignissimos delectus. Dolor rerum sunt. Ex deleniti asperiores. Quia accusantium repudiandae. Distinctio est voluptatum."], ["created_at", "2024-09-11 11:05:35.843543"], ["updated_at", "2024-12-11 04:52:52.399964"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Eum sit recusandae."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Eum sit recusandae."], ["body", "Asperiores sit adipisci. Eos voluptas nobis. Consequatur quos facere. Eligendi est et. Vero expedita quod."], ["created_at", "2024-10-19 13:52:30.387316"], ["updated_at", "2024-12-11 04:52:52.409576"]]
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Vero vitae neque."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Vero vitae neque."], ["body", "Dolores magni sit. Maxime reiciendis possimus. Optio dolorum omnis. Vitae maxime praesentium. Sit eveniet animi."], ["created_at", "2023-12-30 11:39:20.349109"], ["updated_at", "2024-12-11 04:52:52.423936"]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Asperiores atque vero."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Asperiores atque vero."], ["body", "Corporis quia assumenda. Aut sequi asperiores. Rerum repellendus facilis. Velit et sunt. Soluta eius ipsam."], ["created_at", "2024-05-30 03:27:46.215015"], ["updated_at", "2024-12-11 04:52:52.435548"]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quos omnis est."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quos omnis est."], ["body", "Aut dolorem minima. Et aliquid sequi. Aut et voluptatum. Delectus minima autem. Explicabo aperiam quod."], ["created_at", "2024-08-23 05:02:48.605648"], ["updated_at", "2024-12-11 04:52:52.446933"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Possimus omnis pariatur."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Possimus omnis pariatur."], ["body", "Voluptas neque autem. Aliquid ducimus tenetur. Unde perspiciatis suscipit. Inventore quia ipsam. Dignissimos consequuntur sit."], ["created_at", "2024-05-08 09:20:02.932717"], ["updated_at", "2024-12-11 04:52:52.457952"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Eligendi sapiente magni."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Eligendi sapiente magni."], ["body", "Praesentium dolores libero. Recusandae eos consequatur. Est eum quidem. Error natus repellendus. Iusto quidem et."], ["created_at", "2024-02-22 21:09:10.130207"], ["updated_at", "2024-12-11 04:52:52.468556"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Rerum itaque ad."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Rerum itaque ad."], ["body", "Nesciunt tempora error. Sunt laudantium possimus. Natus sint aut. Ut dignissimos et. Placeat repudiandae ab."], ["created_at", "2024-03-09 05:56:06.548791"], ["updated_at", "2024-12-11 04:52:52.479372"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Facilis sapiente voluptate."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Facilis sapiente voluptate."], ["body", "At fugit odio. Dolor aperiam est. Expedita culpa odit. Est necessitatibus delectus. Quaerat sunt voluptatibus."], ["created_at", "2024-05-30 19:50:05.391011"], ["updated_at", "2024-12-11 04:52:52.489942"]]
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Aut repudiandae iure."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aut repudiandae iure."], ["body", "Et delectus veniam. Unde ad voluptatem. Iste qui et. Eos iusto asperiores. Totam ut quo."], ["created_at", "2024-09-28 07:38:25.319274"], ["updated_at", "2024-12-11 04:52:52.504167"]]
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Et quia laudantium."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Et quia laudantium."], ["body", "Cupiditate aspernatur voluptas. Voluptatem et molestiae. Harum sint consequatur. Incidunt modi odit. Eaque nisi expedita."], ["created_at", "2024-01-14 07:33:31.236801"], ["updated_at", "2024-12-11 04:52:52.516017"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ipsam corporis animi."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ipsam corporis animi."], ["body", "Expedita aut voluptas. Tempore autem itaque. Et aut doloribus. Amet rerum nesciunt. Eos voluptate dicta."], ["created_at", "2024-04-27 22:39:23.937360"], ["updated_at", "2024-12-11 04:52:52.531651"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Consequatur suscipit laborum."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Consequatur suscipit laborum."], ["body", "Officia quo quo. Et tempore incidunt. Aut dolorum quos. Quam voluptas culpa. Ut ut dolores."], ["created_at", "2024-09-03 05:22:46.533250"], ["updated_at", "2024-12-11 04:52:52.542616"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ducimus nemo consequatur."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ducimus nemo consequatur."], ["body", "Dolorum itaque vero. Et itaque recusandae. Fugiat sint molestiae. Labore fugit ullam. Aspernatur nulla error."], ["created_at", "2024-04-29 06:27:17.135331"], ["updated_at", "2024-12-11 04:52:52.552924"]]
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ut error eligendi."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ut error eligendi."], ["body", "Et qui est. Reiciendis sit consequatur. Et expedita unde. Consequatur quia numquam. Ipsam minus quaerat."], ["created_at", "2024-08-22 11:18:35.667852"], ["updated_at", "2024-12-11 04:52:52.564040"]]
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Aperiam quasi facere."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aperiam quasi facere."], ["body", "Maiores error est. Mollitia maxime et. Ipsa culpa natus. Atque minima et. Omnis expedita sed."], ["created_at", "2024-09-20 19:31:00.036808"], ["updated_at", "2024-12-11 04:52:52.579684"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quis sapiente rem."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quis sapiente rem."], ["body", "Placeat a omnis. Dolores eum esse. Rerum esse ut. Rerum velit sunt. Eum voluptates aut."], ["created_at", "2024-11-30 05:35:30.084104"], ["updated_at", "2024-12-11 04:52:52.590299"]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Voluptatem error cupiditate."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Voluptatem error cupiditate."], ["body", "Ad nam non. Debitis alias nihil. Deserunt esse vel. Recusandae enim amet. Voluptatum consequatur voluptatem."], ["created_at", "2024-03-04 16:01:19.067989"], ["updated_at", "2024-12-11 04:52:52.601058"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Id dolore sed."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Id dolore sed."], ["body", "Sint debitis soluta. Quae quam dolorem. Facere voluptatem nemo. Et explicabo magnam. Molestiae error sequi."], ["created_at", "2024-12-08 10:26:04.099761"], ["updated_at", "2024-12-11 04:52:52.612610"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Blanditiis autem sequi."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Blanditiis autem sequi."], ["body", "Aperiam dicta in. Sed et nulla. Fugit ipsa ut. Nobis qui consequatur. Voluptas libero voluptatem."], ["created_at", "2024-01-21 16:19:42.600362"], ["updated_at", "2024-12-11 04:52:52.623545"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Libero dolores ut."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Libero dolores ut."], ["body", "Dicta itaque a. Quisquam iusto omnis. Qui molestiae aspernatur. A hic commodi. Fugiat ut iste."], ["created_at", "2024-12-11 00:12:26.186364"], ["updated_at", "2024-12-11 04:52:52.633780"]]
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ratione ut necessitatibus."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ratione ut necessitatibus."], ["body", "Sit earum odit. Repudiandae reiciendis id. Ut aut voluptates. Sed labore laborum. Est ullam enim."], ["created_at", "2024-10-07 10:13:19.627616"], ["updated_at", "2024-12-11 04:52:52.647264"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Optio vitae ut."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Optio vitae ut."], ["body", "Modi doloremque dignissimos. Aliquam et quia. Illum rem voluptate. Voluptate aspernatur nihil. Dolorum eum doloremque."], ["created_at", "2023-12-11 10:52:34.132489"], ["updated_at", "2024-12-11 04:52:52.657822"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Beatae magni iusto."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Beatae magni iusto."], ["body", "Qui a ratione. Odit vel assumenda. Eligendi quam quae. Est totam corrupti. Architecto et corporis."], ["created_at", "2024-03-01 00:28:08.535528"], ["updated_at", "2024-12-11 04:52:52.668301"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Repellat molestiae pariatur."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Repellat molestiae pariatur."], ["body", "Eaque ea amet. Minima iusto ipsa. Ab quibusdam minus. Sit veritatis aperiam. Eius fugiat tempora."], ["created_at", "2024-12-05 06:50:14.126444"], ["updated_at", "2024-12-11 04:52:52.678274"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quo autem aut."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quo autem aut."], ["body", "In sed perspiciatis. Itaque velit est. Accusamus impedit sapiente. Fugiat et ab. Rem quae ipsam."], ["created_at", "2024-03-15 14:29:04.475673"], ["updated_at", "2024-12-11 04:52:52.689055"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Enim molestiae quos."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Enim molestiae quos."], ["body", "Sit impedit est. Ipsa molestias maiores. Repudiandae sed rem. Atque et consectetur. Facere ut ut."], ["created_at", "2024-01-23 04:25:38.961031"], ["updated_at", "2024-12-11 04:52:52.699429"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Consequatur nihil asperiores."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Consequatur nihil asperiores."], ["body", "Aut doloremque veniam. Ratione laboriosam earum. Autem dicta magni. Occaecati doloremque ut. Sed voluptates sint."], ["created_at", "2024-04-26 06:33:39.203425"], ["updated_at", "2024-12-11 04:52:52.709729"]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Maxime non accusantium."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Maxime non accusantium."], ["body", "Autem quisquam voluptatem. Libero beatae est. Unde distinctio non. Est voluptatibus labore. Illum dolorem dicta."], ["created_at", "2024-09-27 12:37:45.076739"], ["updated_at", "2024-12-11 04:52:52.724951"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ut asperiores sunt."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ut asperiores sunt."], ["body", "Consequatur iusto atque. Quisquam est neque. Non non velit. Sed earum dolore. Consequatur enim fugit."], ["created_at", "2024-06-28 02:36:59.117230"], ["updated_at", "2024-12-11 04:52:52.736333"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quod consequuntur rerum."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quod consequuntur rerum."], ["body", "Blanditiis qui et. Voluptas sit et. Omnis harum architecto. Aut eaque voluptatem. Eligendi numquam commodi."], ["created_at", "2024-06-25 16:14:48.787031"], ["updated_at", "2024-12-11 04:52:52.747647"]]
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Aliquid et architecto."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aliquid et architecto."], ["body", "Magni natus assumenda. Blanditiis debitis voluptatem. In harum tempora. Qui quis dignissimos. Et sequi ut."], ["created_at", "2023-12-17 13:57:32.273171"], ["updated_at", "2024-12-11 04:52:52.760509"]]
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Maiores enim rerum."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Maiores enim rerum."], ["body", "Temporibus distinctio ratione. Voluptas alias ad. Delectus modi et. Ipsum et et. Sit et velit."], ["created_at", "2024-04-13 03:30:52.159122"], ["updated_at", "2024-12-11 04:52:52.772348"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Blanditiis aliquid sint."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Blanditiis aliquid sint."], ["body", "Nam voluptatem qui. Quod officiis dolorem. Exercitationem dolor tenetur. Quia culpa aut. Exercitationem similique modi."], ["created_at", "2024-02-07 12:45:58.563599"], ["updated_at", "2024-12-11 04:52:52.783026"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Voluptatem minima quo."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Voluptatem minima quo."], ["body", "Est beatae non. Dolorum quae velit. Est voluptatem quos. Mollitia quis rerum. Libero aliquam eaque."], ["created_at", "2024-12-05 21:14:29.309285"], ["updated_at", "2024-12-11 04:52:52.795295"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Qui perferendis nesciunt."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Qui perferendis nesciunt."], ["body", "Eligendi et sunt. Sed necessitatibus tempora. Et aperiam vel. Doloremque ex distinctio. Officiis excepturi provident."], ["created_at", "2024-02-07 01:06:03.180062"], ["updated_at", "2024-12-11 04:52:52.807497"]]
+  [1m[36mTRANSACTION (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Aut voluptatibus magni."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aut voluptatibus magni."], ["body", "Omnis eligendi et. Quis optio odit. Nobis ea possimus. Porro delectus quia. Dolorem molestiae pariatur."], ["created_at", "2024-11-27 05:16:15.580394"], ["updated_at", "2024-12-11 04:52:52.824027"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Qui autem et."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Qui autem et."], ["body", "Aut laboriosam ut. Vel distinctio delectus. Et similique quibusdam. Nihil alias sit. Itaque perferendis molestias."], ["created_at", "2024-07-25 02:12:50.808373"], ["updated_at", "2024-12-11 04:52:52.835746"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Possimus quia architecto."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Possimus quia architecto."], ["body", "Perspiciatis at commodi. Nihil aut sit. Commodi aut tempore. Id amet ex. Et et non."], ["created_at", "2024-06-10 19:37:31.097540"], ["updated_at", "2024-12-11 04:52:52.846566"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Maiores ut fugit."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Maiores ut fugit."], ["body", "Aut vero dolor. Accusantium ut alias. Eveniet cupiditate tempore. Modi magni maiores. Libero optio architecto."], ["created_at", "2024-03-31 00:43:18.299739"], ["updated_at", "2024-12-11 04:52:52.856888"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Error ut temporibus."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Error ut temporibus."], ["body", "Rem tempora autem. Molestias aliquam atque. Est qui iusto. Natus dignissimos reiciendis. Itaque veniam ipsum."], ["created_at", "2024-07-25 04:07:18.527245"], ["updated_at", "2024-12-11 04:52:52.869250"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Deserunt nulla ea."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Deserunt nulla ea."], ["body", "Nemo totam eius. Illo beatae cupiditate. Velit consequatur dolorem. Est magnam doloremque. Qui earum cum."], ["created_at", "2024-04-25 16:16:48.685041"], ["updated_at", "2024-12-11 04:52:52.880694"]]
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quam et reprehenderit."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quam et reprehenderit."], ["body", "Sapiente aspernatur magni. Vel dolorem ex. Beatae eaque quo. Id repellat in. Architecto quod quaerat."], ["created_at", "2024-02-12 16:54:12.614750"], ["updated_at", "2024-12-11 04:52:52.896593"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Atque fuga rem."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Atque fuga rem."], ["body", "Qui sunt voluptates. Quisquam enim eveniet. Quaerat hic nobis. Facilis temporibus alias. Laudantium ea illum."], ["created_at", "2024-11-19 22:15:20.837200"], ["updated_at", "2024-12-11 04:52:52.907252"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Consequatur nemo laboriosam."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Consequatur nemo laboriosam."], ["body", "Illum sapiente voluptatem. Non explicabo illum. Ut in mollitia. Nesciunt facilis perferendis. Qui minus sint."], ["created_at", "2024-05-29 11:33:23.915694"], ["updated_at", "2024-12-11 04:52:52.917891"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Et quasi aliquam."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Et quasi aliquam."], ["body", "Sunt et tenetur. Dolorum vero similique. Architecto nemo corporis. Odio fugit provident. Voluptatem tenetur hic."], ["created_at", "2024-07-07 08:31:18.160053"], ["updated_at", "2024-12-11 04:52:52.928395"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Et aut deserunt."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Et aut deserunt."], ["body", "Distinctio consectetur cumque. Occaecati ipsum ut. Hic illum vel. Qui excepturi esse. Et aut rem."], ["created_at", "2024-08-07 13:18:38.626247"], ["updated_at", "2024-12-11 04:52:52.938881"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Et quae aut."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Et quae aut."], ["body", "Quasi et est. Pariatur consequatur voluptatibus. Dolor odit quasi. Excepturi molestiae ut. Non veritatis omnis."], ["created_at", "2024-02-22 13:44:58.235986"], ["updated_at", "2024-12-11 04:52:52.949263"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Labore aut quas."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Labore aut quas."], ["body", "Omnis dignissimos delectus. Alias quis in. Facilis enim cumque. Odit iure voluptates. Ut rerum nam."], ["created_at", "2024-10-23 18:31:39.215969"], ["updated_at", "2024-12-11 04:52:52.962324"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Qui alias ipsum."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Qui alias ipsum."], ["body", "Porro molestiae ipsam. Consequatur esse ad. Perspiciatis eaque nihil. Id ut praesentium. Quia corrupti dolore."], ["created_at", "2024-04-08 03:19:12.901222"], ["updated_at", "2024-12-11 04:52:52.972873"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Cupiditate recusandae sed."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Cupiditate recusandae sed."], ["body", "Cupiditate accusamus totam. Ipsam ut ratione. Nihil minus voluptatibus. Ut qui molestias. Quidem rem rerum."], ["created_at", "2024-10-28 20:26:30.503318"], ["updated_at", "2024-12-11 04:52:52.984618"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Perferendis laboriosam hic."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Perferendis laboriosam hic."], ["body", "Neque odit rerum. Nulla consequatur et. Sed et sit. Beatae cupiditate adipisci. Temporibus consequatur veritatis."], ["created_at", "2024-05-13 15:04:21.213758"], ["updated_at", "2024-12-11 04:52:52.995415"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Dolorem sunt culpa."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Dolorem sunt culpa."], ["body", "Et asperiores voluptate. Quis deleniti laudantium. Repudiandae commodi eius. Et quo mollitia. Eveniet vero tempore."], ["created_at", "2024-02-22 00:25:06.115412"], ["updated_at", "2024-12-11 04:52:53.006023"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Perspiciatis voluptatem hic."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Perspiciatis voluptatem hic."], ["body", "Harum occaecati facere. Porro veniam eos. Ipsam facere veniam. Est mollitia eius. Ut magnam tempora."], ["created_at", "2024-03-12 19:52:28.121430"], ["updated_at", "2024-12-11 04:52:53.016404"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quod non quos."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quod non quos."], ["body", "Molestias alias impedit. Autem officia doloremque. Nesciunt repellendus magnam. Iusto accusamus aspernatur. Et modi porro."], ["created_at", "2024-05-01 01:29:36.000984"], ["updated_at", "2024-12-11 04:52:53.027470"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quam magnam nihil."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quam magnam nihil."], ["body", "Ratione qui accusamus. Enim est ut. Cumque hic odio. Beatae inventore vitae. Illo fuga aut."], ["created_at", "2024-09-02 06:03:54.207630"], ["updated_at", "2024-12-11 04:52:53.038070"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Voluptatem ex expedita."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Voluptatem ex expedita."], ["body", "Et laborum corrupti. Et nostrum quo. Sequi pariatur porro. In autem qui. Maxime qui cupiditate."], ["created_at", "2023-12-17 11:46:20.698124"], ["updated_at", "2024-12-11 04:52:53.051230"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Perspiciatis at magnam."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Perspiciatis at magnam."], ["body", "Asperiores voluptatem sunt. Quae velit rerum. Voluptatem incidunt quia. Et ea ut. Consectetur quia quas."], ["created_at", "2024-03-21 01:52:46.196178"], ["updated_at", "2024-12-11 04:52:53.063451"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Est sunt explicabo."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Est sunt explicabo."], ["body", "Earum incidunt rerum. Expedita tenetur est. Et neque occaecati. Autem consequatur incidunt. Optio ut ut."], ["created_at", "2024-11-26 04:10:41.274895"], ["updated_at", "2024-12-11 04:52:53.073936"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Dolor sed quas."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Dolor sed quas."], ["body", "Omnis et qui. Culpa placeat dolore. Maiores neque magni. Impedit veniam ut. Eos ducimus quos."], ["created_at", "2024-02-04 15:26:08.708180"], ["updated_at", "2024-12-11 04:52:53.084254"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Aut amet rerum."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aut amet rerum."], ["body", "Laborum voluptatum consequatur. Maiores vel sunt. Officia provident explicabo. Eum ea occaecati. Repellat est ullam."], ["created_at", "2024-12-02 18:42:42.774433"], ["updated_at", "2024-12-11 04:52:53.094764"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Velit omnis sequi."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Velit omnis sequi."], ["body", "Inventore numquam quas. Qui illum numquam. Velit laudantium repudiandae. Aperiam rerum quisquam. Velit eaque ut."], ["created_at", "2024-05-27 07:51:28.736203"], ["updated_at", "2024-12-11 04:52:53.105398"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quas numquam voluptatem."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quas numquam voluptatem."], ["body", "Velit voluptatem voluptate. Necessitatibus voluptatem dolores. Velit corporis dolores. Vitae quia eum. Provident repudiandae id."], ["created_at", "2024-07-08 16:06:03.919744"], ["updated_at", "2024-12-11 04:52:53.114855"]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ex in quia."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ex in quia."], ["body", "Rerum molestias rerum. Maiores ut veniam. Quia quia sit. Expedita doloribus officia. Cupiditate voluptatem quidem."], ["created_at", "2024-05-11 23:53:46.155271"], ["updated_at", "2024-12-11 04:52:53.128544"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Doloribus odit et."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Doloribus odit et."], ["body", "Aut suscipit enim. Ducimus numquam error. Est consequatur nihil. Aspernatur quia facere. Iure et minus."], ["created_at", "2024-07-29 19:47:44.875916"], ["updated_at", "2024-12-11 04:52:53.139316"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Doloribus sint autem."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Doloribus sint autem."], ["body", "Praesentium molestiae blanditiis. Qui totam eaque. Corporis perferendis iure. Provident fugit non. Dicta id molestias."], ["created_at", "2024-05-29 09:00:33.616338"], ["updated_at", "2024-12-11 04:52:53.149520"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Maxime qui ipsam."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Maxime qui ipsam."], ["body", "Quasi ipsum repudiandae. Sed sit deleniti. Quis commodi ea. Ea reiciendis esse. Sit molestias repudiandae."], ["created_at", "2024-01-15 17:17:02.718811"], ["updated_at", "2024-12-11 04:52:53.160406"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quas amet vitae."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quas amet vitae."], ["body", "Quo voluptatem eveniet. Qui laboriosam recusandae. Velit pariatur ut. Praesentium id eos. Repellat occaecati totam."], ["created_at", "2024-07-21 04:55:03.279640"], ["updated_at", "2024-12-11 04:52:53.171180"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Distinctio beatae dolores."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Distinctio beatae dolores."], ["body", "Ratione et consequatur. Ipsam quibusdam aliquam. Velit totam magni. Veniam ut iure. Voluptatem aspernatur debitis."], ["created_at", "2024-02-18 13:24:36.569743"], ["updated_at", "2024-12-11 04:52:53.182824"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Numquam voluptatem neque."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Numquam voluptatem neque."], ["body", "Nesciunt ipsa et. Dicta est minus. Natus aut cumque. Ipsum doloribus inventore. Dolor necessitatibus quia."], ["created_at", "2024-05-29 08:25:03.498347"], ["updated_at", "2024-12-11 04:52:53.193639"]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ut illo quo."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ut illo quo."], ["body", "Aut aut ea. Beatae numquam similique. A enim ipsa. Sapiente vitae in. Voluptate blanditiis in."], ["created_at", "2024-05-17 04:54:22.002785"], ["updated_at", "2024-12-11 04:52:53.208147"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "In fugit eius."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "In fugit eius."], ["body", "Ipsum qui perspiciatis. Rerum qui est. Numquam adipisci deserunt. Quod eos quia. Dolorem expedita et."], ["created_at", "2024-03-03 08:22:41.702912"], ["updated_at", "2024-12-11 04:52:53.219303"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Labore quae deleniti."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Labore quae deleniti."], ["body", "Nesciunt fugit labore. Eum ipsum sit. Adipisci ut est. Numquam praesentium explicabo. Exercitationem ea libero."], ["created_at", "2024-03-25 19:47:47.467635"], ["updated_at", "2024-12-11 04:52:53.230084"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Id iste incidunt."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Id iste incidunt."], ["body", "Voluptas odio ea. Perferendis saepe error. Sed voluptate consectetur. Facilis qui quod. Molestiae amet repellat."], ["created_at", "2024-10-18 15:43:26.190619"], ["updated_at", "2024-12-11 04:52:53.240956"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Voluptatibus in blanditiis."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Voluptatibus in blanditiis."], ["body", "Consectetur sunt reiciendis. Provident quas aperiam. Est et est. Esse eveniet rerum. Ex ad alias."], ["created_at", "2024-09-03 03:32:54.227767"], ["updated_at", "2024-12-11 04:52:53.252277"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Aperiam dolor quidem."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aperiam dolor quidem."], ["body", "Fugiat facere perspiciatis. Quisquam eos dolorem. Eum optio voluptates. Aut nostrum amet. Voluptate et corrupti."], ["created_at", "2024-01-29 15:24:05.060982"], ["updated_at", "2024-12-11 04:52:53.262592"]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Aut eum est."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aut eum est."], ["body", "Veniam repellendus nam. Magni voluptatum corrupti. Quis natus voluptatem. Laborum perspiciatis consequatur. A sed voluptas."], ["created_at", "2024-04-25 19:55:32.241443"], ["updated_at", "2024-12-11 04:52:53.275946"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Sapiente praesentium officia."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Sapiente praesentium officia."], ["body", "Aperiam illum nihil. Vitae perferendis rerum. Distinctio consequuntur totam. Corrupti necessitatibus sunt. Explicabo voluptates incidunt."], ["created_at", "2024-07-11 23:27:21.884059"], ["updated_at", "2024-12-11 04:52:53.286575"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Perferendis cumque voluptates."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Perferendis cumque voluptates."], ["body", "Sit inventore dolores. Pariatur molestiae fugit. Iste qui consequatur. Et consequuntur temporibus. Nostrum molestias accusamus."], ["created_at", "2024-07-16 05:50:59.102264"], ["updated_at", "2024-12-11 04:52:53.298293"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Qui minus corporis."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Qui minus corporis."], ["body", "Minus non dicta. Iste accusamus quasi. Error repellendus quis. At non est. Earum at doloremque."], ["created_at", "2024-02-11 16:06:52.972618"], ["updated_at", "2024-12-11 04:52:53.308495"]]
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Odio voluptatem ut."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Odio voluptatem ut."], ["body", "Qui vel molestiae. Accusantium et nam. Labore officia id. Similique a praesentium. Asperiores doloribus amet."], ["created_at", "2024-01-06 06:57:27.088404"], ["updated_at", "2024-12-11 04:52:53.319345"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Dolorem vel commodi."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Dolorem vel commodi."], ["body", "Ut nihil neque. Voluptatum ducimus delectus. Est voluptatem itaque. Quo qui vel. Sunt rerum consequatur."], ["created_at", "2024-05-31 02:42:02.374808"], ["updated_at", "2024-12-11 04:52:53.329578"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quod qui soluta."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quod qui soluta."], ["body", "Qui quo qui. A enim sed. Fugit voluptatem et. Commodi sed est. Officia consequuntur qui."], ["created_at", "2024-10-26 13:50:49.833616"], ["updated_at", "2024-12-11 04:52:53.339901"]]
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Rem odio ea."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Rem odio ea."], ["body", "Facere ab maiores. Maiores debitis esse. Iste est est. Voluptates sequi libero. Molestiae sapiente molestias."], ["created_at", "2024-03-08 14:39:26.633234"], ["updated_at", "2024-12-11 04:52:53.353708"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Laudantium distinctio dolorem."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Laudantium distinctio dolorem."], ["body", "Necessitatibus labore vel. Eveniet dicta aut. Dicta natus et. Eaque ut sunt. Sint consequuntur rerum."], ["created_at", "2024-03-12 14:55:38.768786"], ["updated_at", "2024-12-11 04:52:53.365145"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ipsam quibusdam sed."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ipsam quibusdam sed."], ["body", "Non ea labore. Voluptatem qui sapiente. Illum ratione error. Aut et molestiae. Officiis tempora soluta."], ["created_at", "2024-01-05 17:50:33.187961"], ["updated_at", "2024-12-11 04:52:53.375366"]]
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ut officiis officia."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ut officiis officia."], ["body", "Earum velit quam. Harum nemo voluptatum. Ut explicabo temporibus. Blanditiis quia quaerat. Sed expedita ea."], ["created_at", "2024-04-27 15:18:23.195115"], ["updated_at", "2024-12-11 04:52:53.386910"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Maxime aut eaque."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Maxime aut eaque."], ["body", "Dolorem dicta voluptatem. Ratione nisi quidem. Quibusdam quae aut. Omnis voluptates neque. Praesentium adipisci nihil."], ["created_at", "2023-12-16 15:17:16.229184"], ["updated_at", "2024-12-11 04:52:53.397933"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Autem repudiandae reiciendis."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Autem repudiandae reiciendis."], ["body", "Et tenetur ea. Quisquam qui ea. Atque veniam non. Quidem voluptatibus nobis. Et nisi et."], ["created_at", "2024-01-14 05:16:14.557414"], ["updated_at", "2024-12-11 04:52:53.409048"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Saepe non adipisci."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Saepe non adipisci."], ["body", "In iusto blanditiis. Animi veritatis nam. Officia voluptates nostrum. Unde rerum nihil. Eos non quod."], ["created_at", "2024-10-02 05:00:37.676008"], ["updated_at", "2024-12-11 04:52:53.419623"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Quia repellat nihil."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Quia repellat nihil."], ["body", "Laboriosam ipsam suscipit. Ducimus ad nihil. Voluptate velit dolores. Occaecati est enim. Et aut ullam."], ["created_at", "2024-03-24 00:02:57.416825"], ["updated_at", "2024-12-11 04:52:53.430717"]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Autem quia voluptas."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Autem quia voluptas."], ["body", "Eos aliquam beatae. Ut id earum. Minus vero repellat. Deserunt labore cupiditate. Sunt placeat dignissimos."], ["created_at", "2024-02-07 01:18:03.403146"], ["updated_at", "2024-12-11 04:52:53.444768"]]
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ipsum explicabo a."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ipsum explicabo a."], ["body", "Velit sequi et. Enim velit quibusdam. Cumque aliquam in. Odit impedit quibusdam. Possimus soluta laboriosam."], ["created_at", "2024-09-02 02:13:50.488827"], ["updated_at", "2024-12-11 04:52:53.456787"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Non iusto voluptatibus."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Non iusto voluptatibus."], ["body", "Quo necessitatibus tenetur. Ex qui voluptate. Et ex sed. Rem sunt nobis. Consectetur eum amet."], ["created_at", "2024-05-27 10:07:08.232852"], ["updated_at", "2024-12-11 04:52:53.467624"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ratione facilis sit."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ratione facilis sit."], ["body", "Explicabo qui ducimus. Facere quae tenetur. Suscipit aut animi. Hic aut aperiam. Ut natus libero."], ["created_at", "2024-02-22 13:18:04.893359"], ["updated_at", "2024-12-11 04:52:53.479424"]]
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Ut nesciunt necessitatibus."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ut nesciunt necessitatibus."], ["body", "Dicta recusandae suscipit. Iure eligendi veniam. Optio aut ut. Repellat tempore voluptatem. Ipsa officiis ut."], ["created_at", "2024-11-09 08:25:28.279047"], ["updated_at", "2024-12-11 04:52:53.491051"]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Rerum nemo assumenda."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Rerum nemo assumenda."], ["body", "Quae qui est. Sit illo facere. Soluta est quae. Cumque qui blanditiis. Soluta et ullam."], ["created_at", "2024-02-25 20:39:51.102602"], ["updated_at", "2024-12-11 04:52:53.505721"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Fugiat ex sed."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Fugiat ex sed."], ["body", "Commodi consequatur perferendis. Sapiente ut laudantium. Dolorum cumque qui. Nam minima qui. Aliquam quam qui."], ["created_at", "2024-10-26 07:32:32.913639"], ["updated_at", "2024-12-11 04:52:53.515948"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Impedit enim soluta."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Impedit enim soluta."], ["body", "Ducimus rerum omnis. Praesentium veritatis repellendus. Dolorum praesentium molestiae. Sed qui sunt. Nihil commodi pariatur."], ["created_at", "2024-07-29 03:16:16.006321"], ["updated_at", "2024-12-11 04:52:53.526580"]]
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Velit voluptatem placeat."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Velit voluptatem placeat."], ["body", "Consectetur ipsum neque. Qui similique sunt. In consequuntur sunt. Fugiat quas ut. Rerum quia architecto."], ["created_at", "2024-03-13 00:08:06.491140"], ["updated_at", "2024-12-11 04:52:53.540015"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Dolores aut sed."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Dolores aut sed."], ["body", "Placeat id dolorem. Debitis occaecati atque. Accusantium reprehenderit quibusdam. Nihil porro dolorum. Illum sed ea."], ["created_at", "2024-10-10 08:32:13.323036"], ["updated_at", "2024-12-11 04:52:53.551177"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Est dignissimos natus."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Est dignissimos natus."], ["body", "Id et non. Quidem in dolores. Distinctio perspiciatis sit. In culpa voluptatum. Commodi ea non."], ["created_at", "2024-08-02 14:37:56.407892"], ["updated_at", "2024-12-11 04:52:53.561690"]]
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Aut fuga accusantium."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aut fuga accusantium."], ["body", "Voluptatem nulla possimus. Tempora laborum facilis. Ut recusandae atque. Maxime cupiditate blanditiis. Nesciunt illum quo."], ["created_at", "2024-08-26 14:50:39.499294"], ["updated_at", "2024-12-11 04:52:53.575291"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Accusantium dolores ipsam."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Accusantium dolores ipsam."], ["body", "Sed voluptatibus debitis. Earum itaque voluptatem. Exercitationem sed hic. Sapiente ducimus culpa. Illum sit placeat."], ["created_at", "2024-10-27 04:29:58.490649"], ["updated_at", "2024-12-11 04:52:53.586403"]]
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "notes" WHERE LOWER("notes"."title") = LOWER(?) LIMIT ?[0m  [["title", "Delectus optio aperiam."], ["LIMIT", 1]]
+  [1m[36mNote Create (0.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Delectus optio aperiam."], ["body", "Exercitationem quisquam explicabo. Et accusamus officia. Facere libero quaerat. Est corrupti voluptas. Possimus sit voluptas."], ["created_at", "2024-07-05 01:06:20.570318"], ["updated_at", "2024-12-11 04:52:53.598177"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/kurumilla/git/PetsaNoteAPP/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-12-10 20:53:00 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:24:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 9418)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 277.1ms | Allocations: 30772)
+Completed 200 OK in 494ms (Views: 281.4ms | ActiveRecord: 1.2ms | Allocations: 383766)
+
+
+Started GET "/?order=alphabetical_desc" for 127.0.0.1 at 2024-12-10 20:53:01 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"order"=>"alphabetical_desc"}
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."title" DESC[0m
+  ↳ app/controllers/notes_controller.rb:24:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 7879)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 12622)
+Completed 200 OK in 19ms (Views: 13.6ms | ActiveRecord: 0.5ms | Allocations: 21581)
+
+
+Started GET "/?order=newest_first&commit=Aplicar" for 127.0.0.1 at 2024-12-10 20:53:17 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"order"=>"newest_first", "commit"=>"Aplicar"}
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:24:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 7853)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 12595)
+Completed 200 OK in 19ms (Views: 13.4ms | ActiveRecord: 0.5ms | Allocations: 21348)
+
+
+Started GET "/177" for 127.0.0.1 at 2024-12-10 20:53:30 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"177"}
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 177], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:77:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 696)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5593)
+Completed 200 OK in 14ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 8768)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-10 20:53:31 -0800
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:24:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 7877)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 12619)
+Completed 200 OK in 20ms (Views: 14.2ms | ActiveRecord: 0.5ms | Allocations: 21440)
+
+
+Started GET "/99" for 127.0.0.1 at 2024-12-10 20:53:33 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"99"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:77:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 4939)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 5879)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-10 20:53:33 -0800
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:24:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 7852)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 12592)
+Completed 200 OK in 20ms (Views: 13.7ms | ActiveRecord: 0.7ms | Allocations: 21323)
+
+
+Started GET "/?order=alphabetical_desc" for 127.0.0.1 at 2024-12-10 20:55:09 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"order"=>"alphabetical_desc"}
+  [1m[36mNote Load (1.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."title" DESC[0m
+  ↳ app/controllers/notes_controller.rb:24:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 7853)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 12593)
+Completed 200 OK in 25ms (Views: 18.9ms | ActiveRecord: 1.2ms | Allocations: 21323)
+
+
+Started GET "/?order=newest_first" for 127.0.0.1 at 2024-12-10 20:55:09 -0800
+Processing by NotesController#index as HTML
+  Parameters: {"order"=>"newest_first"}
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:24:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 7853)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 12593)
+Completed 200 OK in 18ms (Views: 13.0ms | ActiveRecord: 0.5ms | Allocations: 21319)
+
+
+Started GET "/197" for 127.0.0.1 at 2024-12-10 20:55:43 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"197"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 197], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:77:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4938)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 5875)
+
+
+Started GET "/132" for 127.0.0.1 at 2024-12-10 20:55:53 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"132"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 132], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:77:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 4938)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 5864)
+
+
+Started GET "/199" for 127.0.0.1 at 2024-12-10 20:55:58 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"199"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 199], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:77:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4938)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 5866)
+
+
+Started GET "/200" for 127.0.0.1 at 2024-12-10 20:56:01 -0800
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"200"}
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 200], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:77:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4938)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 5871)
+
+
+Started GET "/" for 127.0.0.1 at 2024-12-10 20:56:03 -0800
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."created_at" DESC[0m
+  ↳ app/controllers/notes_controller.rb:24:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 7852)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 12592)
+Completed 200 OK in 20ms (Views: 14.2ms | ActiveRecord: 0.5ms | Allocations: 21339)
+
+
