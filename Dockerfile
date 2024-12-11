@@ -25,5 +25,7 @@ COPY . .
 
 RUN yarn install
 
+EXPOSE 3000
+
 CMD ["sh", "-c", "rails db:create db:migrate db:seed && rails server -b 0.0.0.0"]
 # CMD ["rails", "db:setup"]
