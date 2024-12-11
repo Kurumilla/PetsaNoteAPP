@@ -15,9 +15,7 @@ Sigue estos pasos para instalar y configurar el proyecto en tu máquina local:
    - `bundle install` 
 
 3. **Instalar dependencias de Node.js**:
-   - `yarn install` 
-     o
-   - `npm install` 
+   - `yarn install` o `npm install` 
 
 4. **Configurar la base de datos**:
    - `rails db:create` crea la base de datos.
